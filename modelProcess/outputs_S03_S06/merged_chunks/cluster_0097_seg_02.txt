@@ -1,0 +1,10 @@
+以下是一些机器学习和密码学中的示例:
+安全多方计算
+组织经常需要协作,但由于保密或法规原因,共享数据是被禁止的。安全多方计算是一种隐私保护技术,使多方能够汇集他们的数据并产生更准确的结果,同时保持每个方的数据对其他方的私密性。各方都可以使用认证功能来验证其“数据洁净室”是否正常运行并且软件是他们所期望的。Intel SGX今天用于多党医疗研究和金融欺诈检测用例。
+联邦学习
+联邦学习是一种隐私保护机器学习(PPML)方法,它将算法部署到分散的设备或站点,以便从太大或太敏感而无法移动到公共数据洁净室的数据中创建联合分析。在这种用例中,算法在进行分析时受到Intel SGX飞地的保护。去除任何私人信息后,结果会传递到中央节点,与其他节点的结果结合,并将新的权重或参数推送到远程模型。这确保敏感数据不会暴露于威胁,并帮助组织构建更准确的模型。
+On April 16, ten cybersecurity vendors set up booths at the RSA Conference 2018 Innovation Sandbox to showcase their cutting-edge technologies. These ten finalists, selected by the RSA Conference judges, covered a range of areas including deception, threat detection, network security, encryption, cloud security, and container security.
+A panel of judges, consisting of venture capitalists, entrepreneurs, and industry veterans, chose BigID as the "Most Innovative Startup" in the 2018 RSA Conference Innovation Sandbox competition.
+BigID CEO Dimitri Sirota expressed, "We are honored to have competed with such an outstanding group of companies and are thrilled to be awarded this prize. We believe that privacy is a 21st-century issue that all companies must take seriously, and we hope that we can help businesses alleviate the challenges of handling privacy."
+Linda Gray Martin, Director and General Manager of the RSA Conference, highlighted, "The long-standing tradition of the RSAC Innovation Sandbox inspires innovation in the security industry. It's crucial for our industry to stay innovative, and it's noteworthy that these innovations no longer necessarily come from Silicon Valley. This year, we saw a record number of applications from outside California. Emerging tech hubs with growing influence in cybersecurity include Tel Aviv, Denver, and the D.C. area, and it's great to see these startups taking the stage."
+"In a fiercely competitive field, BigID stood out for its unique ability to help enterprises better protect customer and employee data. We are confident that BigID will make a significant impact in the cybersecurity industry over the next few years."

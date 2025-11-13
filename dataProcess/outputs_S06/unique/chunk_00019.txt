@@ -1,0 +1,44 @@
+Founded in 2016 and headquartered in Washington, WireWheel is dedicated to simplifying the construction of data privacy protection compliance capabilities, helping companies deal with complex and stringent laws and regulations. In October 2018, the company received a $10 million Series A financing round led by PSP Growth.
+According to the Breach Level Index report published by digital security company Gemalto in October 2018, there were 945 data breaches in the first half of 2018, resulting in the exposure of 4.5 billion records. To strengthen consumer privacy rights and data security, the European Union's General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA) have been enacted and passed. Many companies, lacking awareness and capability for user privacy and data protection, urgently need to respond to various compliance requirements or face severe penalties. The data privacy security company BigID won the RSAC 2018 Innovation Sandbox, and this year’s Innovation Sandbox also focuses on innovation in the field of data privacy, indicating a strong demand for innovation in data privacy protection in the security sector.
+Privacy protection and data security have become important components of corporate security capability building. However, enhancing data privacy protection in a complex IT system environment poses a significant challenge to traditional data loss prevention technologies and products, adding a heavy burden to corporate data management. Large enterprises, with their complex internal network environments and data storage architectures, require technical support across multiple stages such as data discovery, management, and classification for effective data privacy protection. Data collaboration and sharing among multiple departments necessitate the correlation and aggregation analysis of data to more reasonably identify potential privacy leak risks.
+只能应用一些零信任原则来限制被隔离应用程序在多个维度(如文件、注册表、内存、子进程、权限和网络)上的读写操作。微软的应用程序防护是唯一具备此功能的端点保护平台(EPP)产品,并免费提供给所有Windows企业许可证持有者,但使用率不到1%。企业也可以从其他供应商处购买各种实现。
+将零信任原则应用于高风险应用程序意味着不允许它们执行潜在恶意操作。这些操作与企业网络安全堆栈中可能拥有的四种类型工具的关系如下所示。应用程序控制分为预执行和后执行(也称作peri执行),因为很少有应用程序控制工具支持后执行,那些支持后执行的工具被认为太难使用。尽管如此,我们可以看到每种工具对高风险应用程序可能应用的零信任缓解措施。
+涵盖/遗漏的零信任原则:
+- 应用程序控制(预执行)
+- 应用程序控制(后执行)
+- 行为检测(EDR)
+- 隔离
+将文件下载到磁盘:否、是、否、是
+启动/加载磁盘上的文件:是、否、可能、否
+修改磁盘上已有的关键系统或应用程序文件:否、是、可能、是
+读取/窃取操作系统或其他应用程序内存中的数据:否、否、可能、是
+将恶意指令注入另一个应用程序的内存:否、否、可能、是
+将恶意库加载到另一个应用程序的内存:是、否、可能、是
+添加/修改注册表键:否、是、可能、是
+启动并使用操作系统实用程序:是、否、可能、是
+启动/使用无文件进程:否、是、可能、是
+接收并执行来自远程对手的命令:否、否、可能、是
+传输被盗数据:否、否、否、是
+行为检测(也称作EDR)不是零信任机制。许多“可能”答案需要解释。一个AppJacking攻击可能涉及十个阶段。如果在第三阶段发生检测,并且该检测具有高统计置信度,那么行为检测代理将在一秒钟内终止攻击中识别的所有进程。这可能发生在第四到第六阶段之前,这意味着第七到第十阶段永远不会发生。预防第七到第十阶段可能相当于上表中会被阻止的一个或多个行。但这些都是反应而非零信任拒绝。行为检测代理不会明确阻止第七到第十行的动作。相反,终止相关进程会导致这些原本会发生的行为被终止。从默认拒绝的角度来看,行为检测不是零信任机制。零信任机制本质上是确定性的:允许/拒绝特定动作。
+在端点内添加零信任到网络安全防御对于缓解AppJacking风险和降低劳动力成本至关重要。优秀的医疗保健包括预防措施,如疫苗以避免感染,以及早期检测方法以治疗疾病。企业的网络安全防御也是如此,两者结合更好。检测工具可以击败可识别的恶意软件攻击。零信任工具不是通过识别恶意软件,而是通过阻止其有害行为来击败攻击。一种工具可以阻止另一种工具错过的,或者比另一种工具更早地阻止。这是优秀的网络安全防御。
+通过零信任工具阻止检测工具错过的内容,并在检测工具反应之前阻止一些可检测的攻击,添加一个在端点内应用零信任的工具可以减少网络安全堆栈中多个检测工具的警报数量,从而减轻相应网络安全团队的工作负担。此外,端点内的零信任控制在实时阻止攻击,这通常发生在端点被攻破之前。这样的工具可以在检测工具在端点被攻破后做出反应时减轻那些必须修复端点的人的工作负担。
+隔离看起来很好但很少部署,因为大多数实现都非常痛苦。这个话题值得单独一篇博客文章。简而言之,有几种不同的隔离工具。主机沙箱不同于网络或云沙箱,它是一个垃圾场,几年前就被企业端点移除了。微软提供的“应用程序防护”采用了进程虚拟化。这要求修改应用程序源代码,以便应用程序能够穿透边界在整个端点上工作。很少有应用程序经过这样的修改。“应用程序防护”随Windows企业许可证免费提供,但不到1%的企业选择使用它。Bromium基于驱动的隔离工具也遭受了与主机沙箱相同的命运。几乎没有EPP包含隔离功能。必须从第三方获取这些功能。
+AppGuard提供了企业所需以补充检测防御的零信任能力。AppGuard结合了“隔离”和“预执行应用程序控制”,相当于上表中总结的因AppJacking导致的有害操作的所有“是”条目,详细信息见底部表格。
+与其他方案相比,AppGuard的操作工作量较小。AppGuard几乎不受过去和现在的应用程序控制或隔离工具的操作困难的影响。AppGuard确实需要一些前期调优,如果受保护主机进行了重大更改,有时后期也需要调优。在策略未强制执行的短暂发现阶段,可以看到一个或少数几个合法应用程序需要进行策略调优。在策略强制执行的第一周或两周内,可能还需要一些额外的调优。根据观察,部署代理中不到1%的策略与供应商指定的默认策略不同,这种调优工作量很小且很短暂。
+我的数据是一项资产。让我们分享一些保护数据的最佳实践。如果您觉得安全是一种约束,那么是时候重新思考了!在这篇博客文章中,我将与您分享5个简单的规则,这些规则可以轻松实施,通过“对象存储标准-S3 API”类的存储来无烦恼地保护您的备份。
+我是DevOps或DevSecOps,我在自己的平台上开发,并希望专注于我能增加价值的业务。这就是为什么我通过代码管理基础设施的部署和扩展。我将基础设施的管理委托给我的云服务提供商。
+在发展业务的同时,我的数据量呈指数级增长,因此我的数据也具有价值!随着业务的增长,我收集了更多的数据,并逐年保存历史数据集。我甚至在全球新地点进行部署!
+所有这些数据(应用程序、用户数据、日志、媒体、分析、报告)都存储并备份在对象存储中,以实现灵活性、元数据搜索和轻松扩展。我的数据在我手中代表着巨大的资产。数据驱动我的业务,我想保护它。
+数据是一项重要的资产,需要良好的治理!请不要认为,“酷,我已经将数据复制到一个次要存储桶中,我的备份完成了,我很安全。”不,这还不够!
+S3对象存储无法保护你免受的是你自己。让我们一起看看我们需要防范的三类风险。(1) 数据丢失的第一大原因是人为错误、意外删除或用垃圾数据覆盖对象。这是你想避免的情况。(2) 第二类风险与不可预测的事件有关:软件问题、硬件问题(磁盘故障)、数据中心停机或自然灾害/人为灾难。(3) 第三类风险是让安全专家夜不能寐的东西——恶意行为:恶意软件、勒索软件和病毒、破坏行为、DDoS......
+安全非常重要且不容商量,让我们来看看5条简单规则来防范这些风险。
+规则1 – 版本控制
+版本控制有助于防止意外覆盖。您可以在意外删除后恢复一个版本,或在数据损坏时检索特定版本。
+规则2 – 不可变性
+当您的主要存储系统必须开放和可用时,您的备份数据应被隔离且不可变。使用S3对象锁定API实现一次写入多次读取(WORM)模型。您可以根据需求、业务和数据类型定义不同的参数:保留期、法律模式、治理模式、合规模式。此规则帮助您的组织遵守合规要求。为了在法律限定的时间内保留日志,“合规模式”将帮助您设置所需的时间段。这非常方便,因为日志每秒都在生成,因此很难跟踪。借助合规模式,您不再需要担心这一点,您可以设置1年、3年或5年的期限,日志将在指定期间内受到保护。
+规则3 – 异地数据复制
+为了防止硬件故障或地理事件的影响,请遵循著名的3+2+1模型。在设置数据副本之前,您需要评估目标的RPO和RTO。RPO(恢复点目标)= 在发生地理故障的情况下,什么时间点的数据快照对您来说是可以接受的,以便在恢复数据时损失最少的数据;RTO(恢复时间目标)= 在发生地理故障的情况下,恢复数据的可接受时间是多少。当然,每个人都希望实现零秒恢复,但这是否必要?这样的恢复计划需要昂贵的资源来维护。一个好建议是按重要性类别对数据进行分类,并根据类别调整此计划并实施备份保留策略。
+规则4 – 加密
+当您的数据不使用时,可以使用自己的密钥对其进行加密。我们使用基于AES-256协议的功能。加密您的数据:使用您自己的密钥和基于AES-256的加密。请注意,在传输过程中,数据通过TLS协议进行了加密。
+规则5 – 用户策略
+仅授予执行任务所需的权限,使用用户策略存储桶策略(即将推出)。每月提取您的S3策略并检查它们;这不会花费太多时间并且可以自动化。确保您知道所有用户,并且权限适合每个角色。永远不要让通配符*提供对敏感存储桶/对象的访问。

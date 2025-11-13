@@ -1,0 +1,7 @@
+In the previous issue, we introduced concepts such as protocols and cryptographic protocols, and discussed the technical specifications of the IPSec VPN protocol based on national and industry standards for cryptography. We also interpreted the evaluation and verification methods of the IPSec VPN protocol through practical cases. In this issue, we will continue to explore with Dr. Yang the related content on the compliance verification of the IPSec protocol.
+
+IPSec Protocol Compliance Verification
+(1) IPSec VPN Device Protocol Configuration Check
+When confirming the compliance of the IPSec protocol, one can start by checking the relevant configurations of the IPSec VPN device, such as encryption algorithms, authentication algorithms, and operating modes. This step helps to preliminarily confirm whether the device uses commercial cryptographic algorithms and protocols for data transmission. The following figure (Figure 1) shows the IPSec protocol configuration page of a certain IPSec VPN device, which includes the used cryptographic algorithms and operating mode.
+
+我的数据是一项资产。让我们分享一些保护数据的最佳实践。如果您觉得安全是一种约束，那么是时候重新思考了！在这篇博客文章中，我将与您分享5个简单的规则，这些规则可以轻松实施，通过“对象存储标准-S3 API”类的存储来无烦恼地保护您的备份。

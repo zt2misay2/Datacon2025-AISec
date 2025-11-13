@@ -1,0 +1,9 @@
+作为潜在受影响服务器的管理员,我该怎么办?
+首先,使用我们团队开发的工具(仅限Linux)检查您的服务器是否受到此漏洞的影响:
+# wget https://raw.githubusercontent.com/speed47/spectre-meltdown-checker/master/spectre-meltdown-checker.sh
+# sh spectre-meltdown-checker.sh --variant zenbleed --explain
+如果工具显示“NOT VULNERABLE”(未受影响),则您已经安全,无需进一步行动。
+如果工具显示“VULNERABLE”(受影响),则应评估您面临威胁的程度。
+Currently, many online analysis articles focus on maintaining processor speed, which has become a higher priority than security considerations. Even the repair solutions from manufacturers are designed to avoid affecting device performance. Whenever a vulnerability is exposed, the speed at which vendors release patches is often criticized, and this situation is no different. For these two vulnerabilities, cloud users and IT administrators, in particular, need to pay attention and promptly apply the fixes.
+
+In theory, after applying the patches and updates, everything should be fine. However, it's not that simple, as some unfortunate users have encountered additional problems. After the vulnerabilities were disclosed, Google stated that the currently released software repairs "have minimal impact on performance" and insisted that over time, the impact of the patches on performance would decrease. Intel also mentioned in its announcement: "Any performance impact depends on the workload. For general computer users, the impact of the patch on performance is not significant and will lessen over time." Due to the so-called Processor-Context ID (PCID) feature of the chips, these statements may hold true and ultimately be correct. However, more issues are still to follow.

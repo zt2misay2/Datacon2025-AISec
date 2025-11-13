@@ -1,0 +1,10 @@
+All AMD Zen2 CPU, including EPYC Rome processors, have this vulnerability, specifically including:
+- AMD Ryzen 3000 series processors
+- AMD Ryzen PRO 3000 series processors
+- AMD Ryzen Threadripper 3000 series processors
+- AMD Ryzen 4000 series processors with Radeon graphics
+- AMD Ryzen PRO 4000 series processors with Radeon graphics
+- AMD Ryzen 5000 series processors with Radeon graphics
+- AMD Ryzen 7020 series processors with Radeon graphics
+- Second-generation AMD EPYC "Rome" processors
+The impact of the patches on device performance has already been evident. Although most ordinary desktop users and gamers have not noticed any delay, slowdown, or performance degradation, users running IO or system call-intensive software, such as databases on backend servers, might notice the effect of the patched CPU. Red Hat in the U. S. has set the range of the performance impact of the patches between 1% and 20%. Epic Games also explained last Friday regarding the recent login and server stability issues faced by players: "All our cloud services have been affected due to patching and fixing Meltdown and Spectre. "

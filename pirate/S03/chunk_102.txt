@@ -1,0 +1,33 @@
+虽然大多数网络安全漏洞涉及技术问题，但网络安全最终还是一个人的问题。人为因素使企业面临风险，削弱了技术的有效性，但也可以弥补技术无法解决的问题。一些网络问题最好通过人性化解决方案或至少考虑人的状况来处理。我们分享了一些组织可以实施的专业提示，以减轻安全漏洞。这将有助于缓解网络安全计划中许多层级的工作量和压力  
+寻找暴露的杂项错误  
+根据Verizon DBIR 2019报告，“杂项错误”是金融、保险、教育、医疗保健、信息、公共管理、零售和技术服务领域前三大违规模式之一。专业提示：只有冗余的、主动的流程才能解决这些人为造成的症状。您的员工应维护并寻求“错误”Top 10/25/100列表，并与同行合作维护这些列表。优先处理高影响漏洞。寻找方法进行隔离以减少暴露  
+依赖专家进行渗透测试，而不是冒牌货  
+人们倾向于熟悉和舒适的事物。一些渗透测试人员从同一个技巧袋中抽取，而不是系统地针对整个可能的风险范围。许多企业难以区分专家和冒牌货。专业提示：利用威胁框架，如Mitre Att@ck。选择威胁情报提供商时，部分应基于他们如何从可能性缩小到可能性。除非确定其非常出色，否则避免使用同一家渗透测试公司。不同渗透测试人员之间的差异可能很大，一个可能发现其他人遗漏的漏洞。  
+构建基于角色的网络安全培训计划  
+有效的员工网络安全准备培训可以减轻主要风险。给接待员和IT系统管理员提供相同的培训可能比不培训更糟糕。他们对风险（太低）和缓解措施（太高）的看法差异很大。集中培训很快会被遗忘，警惕性的暂时提高会回到粗心大意的状态。人的问题需要人的解决方案。专业提示：个性化员工网络安全准备培训。通过模拟钓鱼等手段挖掘数据，找出高风险员工。使用针对不同角色定制的内容。使准备成为一个持续的过程，教导、激励并强化  
+由于COVID-19危机，大多数员工预计将在传统环境之外工作。此外，随着远程工作因各种原因成为常态，组织可以利用这个机会建立适合传统和远程环境的强大网络安全态势。重要的一点是，网络安全挑战不仅涉及技术，而且以人为本的解决方案也是必不可少的。适用于一个组织的最佳方案可能并不适合其他组织  
+The top ten mitigation strategies from the U.S. National Security Agency counter various techniques that APT attackers might use. These measures set priorities for organizations to minimize business impact and are built on the NIST Cybersecurity Framework functions, which aim to manage cybersecurity risks and promote a defense-in-depth approach. The strategies are ranked based on the effectiveness of known APT tactics, and additional strategies and best practices are needed to address new tactics as they emerge.  
+Cybersecurity protection keywords: Identify, Protect, Detect, Respond, Recover  
+Update and upgrade software immediately  
+Keywords: Identify, Protect  
+Apply all available software updates, automate the process as much as possible, and use update services provided directly by vendors. Automation is crucial because attackers often study patches and exploit methods shortly after a patch is released. These "N-day" exploits can be as destructive as zero-day vulnerabilities. Vendor updates must also be genuine to ensure the integrity of the content. If applications are not patched quickly and thoroughly, attackers can carry out intrusions within the defender's patch cycle.  
+Secure privileges and accounts  
+Keywords: Identify, Protect  
+Assign privileges based on risk exposure and maintain them as required for operational purposes. Use Privileged Access Management (PAM) solutions to automate credential management and fine-grained access control. Another method of managing privileges is through tiered administrative access, where each higher tier provides additional access but to fewer individuals. Create procedures to securely reset credentials such as passwords, tokens, and badges. Controlling privileged accounts and services is essential to prevent attackers from gaining administrative access to high-value assets and moving laterally across the network.  
+根据身份盗窃资源中心（ITRC）上个月发布的《2021年回顾报告》，我们推断出几乎一半的2021年数据泄露是由于端点保护失败造成的。这个推断是合理的，但需要承认这个数字最多只是近似值。尽管如此，它对于设定2022年的网络安全堆栈和安全运营优先级仍然有用。需要在端点提供更多保护。  
+为什么这个端点保护失败的数字很重要  
+没有人的预算足够支付所有可能的风险缓解措施。决策者必须选择哪些措施可能以最低的成本产生最大的影响。他们已经为多层次的网络安全堆栈提供了资金，以实现纵深防御。人员成本通常远高于工具成本。所有组织至少在每个端点上都有一个基于软件的防御（例如，传统的防病毒软件、端点保护平台）。其他层次部署在端点之前（即边界）、周围（例如，入侵检测、实体用户行为分析等）和之后（SIEM、XDR等）。来自端点防御的警报也应被视为涉及端点防御之后的资源，因为直到分析师调查后才会阻止或终止任何事情。而且，不要忘记补救和其他事件后的成本。  
+完美的预防性端点保护将大大减少“周围”和“之后”层的人员工作量。相反，更多的端点保护失败会增加“周围”和“之后”的成本。这也增加了风险，因为当人员追查大量相对低影响的事件时，他们无法处理高影响的事件。警报疲劳也会降低人员效率，从而增加风险。  
+决策者总是在众多潜在的网络安全投资中挣扎选择。声称2021年46%的数据泄露是由于端点保护失败造成的，这意味着有了这个数字比没有这个数字更容易选择改进措施。这样做可以改善整体风险缓解并降低IT/安全运营成本。  
+我们如何得出这个数字以及为什么它可能低估了原因  
+该报告将“网络攻击”数据泄露的原因分类为：“钓鱼/短信钓鱼/BEC”、“勒索软件”、“恶意软件”、“非安全云环境”、“凭证填充”、“未修补的软件漏洞”、“零日攻击”、“其他-未指定”，以及“NA”（未定义）。我们排除了未归因的泄露事件，然后将“勒索软件”（33%）、“恶意软件”（13%）、“未修补的软件漏洞”（0.4%）和“零日攻击”（0.4%）的个别原因合并到我们得出的“端点保护失败”数字（46%）。这些数字仅适用于那些归因了根本原因的数据泄露事件。  
+钓鱼攻击可能涉及社会工程、恶意软件或两者兼有。我们无法说有多少比例的钓鱼攻击涉及恶意软件。多年来，Verizon数据泄露调查报告背后的专家告诉我们，事件/泄露提交往往存在问题。一些钓鱼攻击可能涉及恶意软件，但未被分类为恶意软件。同样，许多甚至大多数组织缺乏快速识别由于“未修补的软件漏洞”或“零日攻击”导致的事件/泄露所需的取证能力。因此，由于端点保护失败而导致的数据泄露很可能被低估了。  
+“零日攻击”的数字并不令人惊讶。它们一直占很小的比例，因为还有许多其他方式可以破坏企业。然而，同比增幅达到了300%。不过，2021年确实比2020年报告了更多的零日漏洞。  
+2021年勒索软件和恶意软件导致的数据泄露增加  
+报告显示，2021年勒索软件导致的数据泄露比2020年增加了122%。同样，恶意软件导致的数据泄露增加了34%。  
+2021年数据泄露比2020年增加了84%  
+ITRC的数据表明，2021年和2020年分别有1,613起和878起由网络攻击引起的数据泄露。这相当于增长了83.7%。许多人认为这是由于更多的人在家工作，这意味着对端点保护的依赖更大。  
+三分之一的泄露事件未归因于根本原因  
+这对上述所有数字意味着什么？我们只能猜测。然而，这确实说明了很多潜在信息有助于每个人做出更好的决策。你可能已经注意到，公开的数据泄露报告很少具体说明哪些网络安全防御失败及其方式。  
+恶意软件“检测差距”使每个人都处于风险之中  
+我们认为，企业防御过于依赖检测技术，而这些技术未能识别恶意文件和行为的几乎无限种类。更糟糕的是，太多组织依赖低端的基于检测的防御。有些防御效果远好于其他。但即使是最好的防御也会失败。而且，最好的防御越来越多地在检测和应对复杂的恶意软件攻击时，是在一个或多个端点和凭证被攻破后数小时到数月才进行。这种情况发生得越晚，清理成本和财务影响就越大。

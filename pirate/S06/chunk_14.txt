@@ -1,0 +1,60 @@
+我们继续与当局和安全社区合作，进行技术分析以确定IOC并了解恶意软件在初始入侵后的行为。到目前为止，我们已经确认了以下行为：入侵载体使用了OpenSLP漏洞，可能是CVE-2021-21974（仍需进一步确认）。日志显示用户dcui参与了入侵过程。加密过程中，恶意软件部署了一个位于/tmp/public.pem中的公钥，并专门针对虚拟机文件（如.vmdk、.vmx等）进行加密。此外，恶意软件试图通过杀死VMX进程来关闭虚拟机以解锁文件，但此功能并不总是按预期工作，导致文件保持锁定状态。恶意软件还创建了一个argsfile，用于存储传递给加密二进制文件的参数（例如跳过的MB数、加密块中的MB数、文件大小）。没有证据表明数据外泄发生过。在某些情况下，文件加密可能部分失败，从而允许恢复数据。土耳其安全研究员Enes Sönmez (@enes_dev) 已经记录了一种VMDK文件恢复的方法，该方法在他的博客(https://enes.dev/) 中进行了描述。我们和其他安全专家测试了这一程序，在多个受影响的服务器上取得了约2/3的成功率。请注意，执行此程序需要较强的技术能力，自行承担风险，并建议寻求专家的帮助。  
+在之前的帖子版本中，我们曾假设这次攻击与Nevada勒索软件有关，这是一个错误。目前没有任何材料可以将这次攻击归因于任何特定团体。归因从来都不容易，我们让安全研究人员自己得出结论。ESXi操作系统只能安装在裸金属服务器上。为了识别客户的ESXi安装，我们启动了几项基于自动化日志的举措。由于我们无法逻辑访问客户的服务器，因此我们的行动手段有限。对于已识别的裸金属主机，我们在周五下午发送了电子邮件，警告客户潜在的风险并提供如何减轻风险的信息。同时，我们封锁了互联网与安装ESXi的服务器之间的OpenSLP端口（427）。如果出于某种原因需要使用427端口，客户可以在其管理界面中停用过滤规则。我们还启动了扫描，通过测试是否存在指定主机已被入侵的网页和/或ssh横幅来识别被入侵的主机，并通知受影响的客户。我们的支持团队全力动员，帮助客户保护他们的系统，并在他们受到攻击影响时协助恢复。  
+此次攻击主要针对7.0 U3i版本之前的ESXi服务器，显然通过OpenSLP端口（427）进行。要检查您的ESXi版本，请参阅您的客户界面上的服务器页面，或直接查看系统本身的ESXi界面。对于使用ESX-i的裸金属客户，我们强烈建议紧急采取以下措施：禁用服务器上的OpenSLP服务或将访问限制为仅受信任的IP地址 (https://kb.vmware.com/s/article/76372)，并将您的ESXi升级到最新的安全补丁。之后，确保您的数据已备份（最好是在不可变存储上），只有必要的服务处于活动状态，并通过ACL过滤仅允许受信任的IP地址访问。同时，监控您的系统是否有任何异常行为。使用VMware私有云的客户不受影响，因为设计上SSL网关会阻止外部访问此端口（OpenSLP 427）。对于我们的公共云客户，由于不依赖于ESXi，因此没有发现风险。OVHcloud产品组合中的其他产品也不受此次勒索软件活动的威胁。  
+裸金属服务器、数据保护与隐私：来自Intel的Mike Ferron-Jones合作撰写。面对严峻的网络威胁环境，企业正在寻找新的数据保护和隐私解决方案及最佳实践。OVHcloud的新款Advance-6裸金属服务器配备了第三代Intel® Xeon®可扩展处理器（以前代号为“Ice Lake”）和Intel®软件保护扩展（Intel SGX）。这些技术提供了更高的性能，并利用机密计算来实现数据隐私、法规遵从性和更强的数据保护。阅读本文以了解更多关于机密计算的信息以及如何从中受益。  
+现代业务转型的核心在于数据处理能力的提升。随着世界变得更加互联，企业面临数据收集、使用和存储的增长。为了应对这一挑战，云和数据分析等新解决方案不断涌现，正在改变业务运营方式。然而，如果忽视安全问题，这些变化也可能带来更大的风险。我们认为，安全、隐私和合规性必须与业务转型并行推进。因此，我们使用Intel® SGX构建了Advance-6裸金属服务器——它为客户提供了机密计算和增强的数据保护。虽然磁盘和网络加密可以在数据存储或传输时提供保护，但传统上，在数据被CPU和内存使用时是脆弱的。Intel SGX创建了硬件保护的“飞地”，旨在在数据使用时屏蔽数据和代码免受未经授权的方或软件的侵害。飞地内的数据和代码对云管理员或软件堆栈不可访问，从而帮助组织遵守GDPR和其他法规的要求。  
+通过机密计算应对安全挑战变得尤为重要。企业数据正面临黑客、未经授权的第三方和恶意内部人员的更大威胁，他们经常利用应用程序中的漏洞，或操作系统和虚拟机监控程序层中的特权提升。随着软件安全性的提高，攻击者开始向下移动到堆栈中寻找新的漏洞，这使得商业机密或受监管的数据面临风险。数据泄露可能导致严重的经济损失和声誉损害。这意味着外围防御已不再足够。需要的是多层次的防御策略，使成功执行攻击变得不可行。机密计算技术对于此类策略至关重要，因为它使用基于硬件的方法将数据隔离在可信飞地中并在内存中对其进行加密。这可以保护数据免受操作系统和虚拟机监控程序层中的漏洞的影响，并确保即使具有完全访问权限的用户也无法在没有密钥的情况下解密数据。  
+机密计算也是“合规计算”。欧洲在隐私和数据保护方面处于世界领先地位，处理个人或受监管数据的组织需要采取措施来最小化违规或违反的风险。这意味着部署行业最佳实践和最新的隐私保护技术，以维护数据安全、主权和控制。使用Intel SGX的机密计算可以成为合规制度的关键部分，并有助于降低监管风险。即使是像OVHcloud这样的云提供商也无法访问飞地内受保护的数据。此外，OVHcloud提供认证服务，使客户能够获得加密验证，确认其工作负载运行在真正的Intel SGX硬件上，微代码是最新的，软件负载正是预期的。认证有助于确保客户的数据受到保护并符合规定。  
+Advance-6裸金属服务器提供了增强的性能，同时使解决方案能够快速大规模部署。它受益于PCIe Gen4和数据中心级NVMe磁盘，从而提高了带宽。OVHcloud链路聚合功能使两台服务器的物理网络链接能够聚合，以实现最佳网络速度。Advance-6服务器还包含第三代Intel® Xeon®可扩展处理器，该处理器通过Intel® 10nm工艺提高了每核性能。它们还包含驱动机密计算的技术——Intel® SGX。Intel® SGX在CPU级别内置，使数据能够在可信的加密飞地中隔离。Intel® SGX还提供：即使操作系统/驱动程序/BIOS/VMM/SMM被破坏，也能防止攻击；即使攻击者完全控制平台，也能增加对秘密（数据/密钥/密码）的保护；防御针对内存总线窥探、内存篡改和针对RAM的“冷启动”攻击。  
+以下是一些机器学习和密码学中的示例：  
+安全多方计算  
+组织经常需要协作，但由于保密或法规原因，共享数据是被禁止的。安全多方计算是一种隐私保护技术，使多方能够汇集他们的数据并产生更准确的结果，同时保持每个方的数据对其他方的私密性。各方都可以使用认证功能来验证其“数据洁净室”是否正常运行并且软件是他们所期望的。Intel SGX今天用于多党医疗研究和金融欺诈检测用例。  
+联邦学习  
+联邦学习是一种隐私保护机器学习（PPML）方法，它将算法部署到分散的设备或站点，以便从太大或太敏感而无法移动到公共数据洁净室的数据中创建联合分析。在这种用例中，算法在进行分析时受到Intel SGX飞地的保护。去除任何私人信息后，结果会传递到中央节点，与其他节点的结果结合，并将新的权重或参数推送到远程模型。这确保敏感数据不会暴露于威胁，并帮助组织构建更准确的模型。  
+目前有一波攻击正在针对ESXi服务器。虽然没有OVHcloud管理的服务受到此次攻击的影响，但许多客户在自己的服务器上使用这个操作系统。因此，我们提供这篇帖子作为参考，以帮助他们进行修复。这些攻击在全球范围内被检测到。根据生态系统中的专家以及权威机构的说法，恶意软件可能利用了CVE-2021-21974作为入侵载体。调查仍在进行中，以确认这些假设。我们的技术团队正在努力识别攻击的详细特征，并与来自其他CERT和安全团队的同行协调。  
+更新 07/02/2023  
+我们继续进行调查并为客户提供支持。我们优先考虑以下工作：识别我们网络中受影响的客户，以提供最准确和适当的信息，帮助他们从攻击中恢复；识别潜在的脆弱客户，确保他们在类似攻击再次发生时尽快采取适当的措施来减轻风险。一些安全研究人员可能已经发现了Babuk勒索软件源代码（于2021年9月泄露）之间的联系。加密算法（Sosemanuk）在这两种情况下都被使用，但代码结构似乎略有不同。  
+除了之前描述的恢复程序外，我们注意到加密过程只影响文件中的一小部分数据。根据您的虚拟机操作系统和文件系统类型，您可能能够使用数据恢复工具至少部分地恢复数据。请注意，这些工具可能会对文件产生不可逆的影响，因此我们建议在尝试任何恢复操作之前将虚拟机文件复制到另一个位置以保护数据。我们列出了可以协助您恢复数据和重建系统的公司名单。该名单将在OVHcloud支持页面上提供。  
+我们也提醒作为数据控制者的客户，他们在发生安全事件时可能有法律要求通知当局。确保您在规定的时间内向适当的当局申报了事件。您可以在下面找到主要受影响国家的数据保护当局关于数据泄露违规的程序以及CERT网站。请与您的法律部门或法律顾问确认，以确保根据您的身份通知正确的组织。对于个人数据控制者：  
+法国：  
+https://www.cnil.fr/fr/notifier-une-violation-de-donnees-personnelles  
+意大利：  
+https://servizi.gpdp.it/databreach/s/  
+比利时：  
+https://www.autoriteprotectiondonnees.be/professionnel/actions/fuites-de-donnees-personnelles  
+西班牙：  
+https://www.aepd.es/es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion  
+波兰：  
+https://uodo.gov.pl/pl/501/2278  
+英国：  
+https://ico.org.uk/for-organisations/report-a-breach/  
+德国：  
+https://formulare.bfdi.bund.de/lip/form/display.do?%24context=E72B6A6366642AE42118  
+葡萄牙：  
+https://www.cnpd.pt/databreach/  
+魁北克：  
+https://www.cai.gouv.qc.ca/incident-de-confidentialite-impliquant-des-renseignements-personnels/aviser-commission-et-personnes/  
+CERT：  
+法国：  
+https://www.cert.ssi.gouv.fr/les-bons-reflexes-en-cas-dintrusion-sur-un-systeme-dinformation/  
+意大利：  
+https://cert-agid.gov.it/contatti/  
+比利时：  
+https://www.cert.be/fr/signaler-un-incident  
+西班牙：  
+https://www.ccn-cert.cni.es/gestion-de-incidentes/notificacion-de-incidentes.html  
+波兰：  
+https://incydent.cert.pl/#!/lang=en  
+英国：  
+https://report.ncsc.gov.uk/  
+加拿大：  
+https://www.cyber.gc.ca/en/incident-management  
+德国：  
+https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Cyber-Sicherheitslage/Reaktion/CERT-Bund/Kontakt/kontakt_node.html  
+葡萄牙：  
+https://www.cncs.gov.pt/pt/certpt/  
+附加参考资料：  
+https://www.bleepingcomputer.com/news/security/  
+https://www.bleepingcomputer.com/forums/t/782193/esxi-ransomware-help-and-support-topic-esxiargs-args-extension/massive-esxiargs-ransomware-attack-targets-vmware-esxi-servers-worldwide/  
+https://blogs.vmware.com/security/2023/02/83330.html  
+https://members.loria.fr/MMinier/static/papers/sosemanuk_8.pdf

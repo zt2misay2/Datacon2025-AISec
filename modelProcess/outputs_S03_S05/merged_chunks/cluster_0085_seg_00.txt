@@ -1,0 +1,16 @@
+This article represents the views of CSO, a news media platform under IDG Consulting. Security threats are constantly evolving and tend to follow trends. As long as a certain type of threat is highly successful and profitable, cybercriminals will imitate it. Therefore, the best defense is to identify these threat trends and take the initiative in threat detection. In line with this perspective, Gartner rated the "Top 11 Information Security Technologies for 2017" in June. We focused on the hottest technology categories mentioned by Gartner for 2017, delved into the latest cybersecurity products and services, and selected 22 of the most innovative and practical products for 2017. These products have all been tested in local test platforms or production environments provided by the vendors. They address some of the most destructive security threats currently. The following products are listed in alphabetical order.
+
+Acalvio ShadowPlex
+Category: Deception Technology
+Deception technology is an emerging field, and simple and effective deployment technologies have often been at a bottleneck. Acalvio ShadowPlex sets an example in overcoming these technical difficulties. It provides customers with an unlimited number of deception assets, avoiding frequent maintenance and cost inputs. These deception points can be activated immediately when needed, locking onto attackers and continuously tracking them to obtain valuable threat intelligence. The tool then either conducts its own tracking or integrates with SIEMs like Splunk to remove the threats from the protected network.
+没有任何一种检测技术是足够的。为了发现异常,端点内部(EDR)、网络之间(IDS,入侵检测系统)以及与目录和云应用集成(UEBA,用户实体行为分析)都配备了传感器。经验丰富的从业者知道,“更多数据”通常会增加劳动力成本,甚至可能削弱检测效果。这些数据流入SIEM和/或XDR系统,在那里融合来自不同来源的信息。如果没有合适的人才,SIEM和XDR将无法发挥其应有的作用。
+
+减少分诊仪表板的数量并未显著降低警报数量。误报和警报疲劳仍然是普遍存在的问题。调查警报所需的技能差距依然存在。经验丰富的SOC分析师将其视为“时间黑洞”,因为他们必须“追踪许多死胡同”。更糟的是,他们会告诉你,机器学习在数据减少方面的表现并不如人们所希望的那样好。“这是压倒性的!”
+
+事件响应者必须确定每次入侵的范围,加以遏制,并最终恢复到攻击前的状态。在任何一次事件中,可能涉及许多不同的团队。协调和事后努力可能是相当大的且昂贵的工作。
+
+响应不仅限于检测。复杂的生态系统增加了对警报响应的更全面编排的需求,以大幅减少劳动力。安全编排自动化与响应(SOAR)和扩展检测与响应(XDR)都是有前景的帮助。理想情况下,它们会自动完成许多不同工具的工作。怀疑论者担心生态系统过于异构。明智的资金正在等待看这些是否能交付,而不会让一个人比勒索软件更快地瘫痪企业。
+
+预计这些成本将继续增长并无限期存在。量化它们并将它们之间的因果关系相关联是非常具有挑战性的。无论对你来说是什么,它们仅仅取决于在端点被攻破之前,检测工具错过的攻击数量。
+
+最大化人员配置:剧本、演练培训、事件回顾、流程改进和威胁搜寻

@@ -1,0 +1,12 @@
+由于COVID-19危机,大多数员工预计将在传统环境之外工作。此外,随着远程工作因各种原因成为常态,组织可以利用这个机会建立适合传统和远程环境的强大网络安全态势。重要的一点是,网络安全挑战不仅涉及技术,而且以人为本的解决方案也是必不可少的。适用于一个组织的最佳方案可能并不适合其他组织
+The top ten mitigation strategies from the U.S. National Security Agency counter various techniques that APT attackers might use. These measures set priorities for organizations to minimize business impact and are built on the NIST Cybersecurity Framework functions, which aim to manage cybersecurity risks and promote a defense-in-depth approach. The strategies are ranked based on the effectiveness of known APT tactics, and additional strategies and best practices are needed to address new tactics as they emerge.
+Cybersecurity protection keywords: Identify, Protect, Detect, Respond, Recover
+Update and upgrade software immediately
+Keywords: Identify, Protect
+Apply all available software updates, automate the process as much as possible, and use update services provided directly by vendors. Automation is crucial because attackers often study patches and exploit methods shortly after a patch is released. These "N-day" exploits can be as destructive as zero-day vulnerabilities. Vendor updates must also be genuine to ensure the integrity of the content. If applications are not patched quickly and thoroughly, attackers can carry out intrusions within the defender's patch cycle.
+Secure privileges and accounts
+Keywords: Identify, Protect
+Assign privileges based on risk exposure and maintain them as required for operational purposes. Use Privileged Access Management (PAM) solutions to automate credential management and fine-grained access control. Another method of managing privileges is through tiered administrative access, where each higher tier provides additional access but to fewer individuals. Create procedures to securely reset credentials such as passwords, tokens, and badges. Controlling privileged accounts and services is essential to prevent attackers from gaining administrative access to high-value assets and moving laterally across the network.
+没有任何一种检测技术是足够的。为了发现异常,端点内部(EDR)、网络之间(IDS,入侵检测系统)以及与目录和云应用集成(UEBA,用户实体行为分析)都配备了传感器。经验丰富的从业者知道,“更多数据”通常会增加劳动力成本,甚至可能削弱检测效果。这些数据流入SIEM和/或XDR系统,在那里融合来自不同来源的信息。如果没有合适的人才,SIEM和XDR将无法发挥其应有的作用。
+
+减少分诊仪表板的数量并未显著降低警报数量。误报和警报疲劳仍然是普遍存在的问题。调查警报所需的技能差距依然存在。经验丰富的SOC分析师将其视为“时间黑洞”,因为他们必须“追踪许多死胡同”。更糟的是,他们会告诉你,机器学习在数据减少方面的表现并不如人们所希望的那样好。“这是压倒性的!”

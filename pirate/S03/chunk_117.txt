@@ -1,0 +1,35 @@
+对 Windows 7 的支持已于2020年1月结束。2020年1月14日之后，微软不再为安装了 Windows 7 的 PC 提供安全更新或支持。如果您在支持结束后继续使用 Windows 7，您的 PC 仍然可以工作，但会更加脆弱。即使公司本身不使用 Windows 7，通过供应链、合作伙伴和远程员工使用该系统也会使组织面临更高的风险。一些最严重的数据泄露事件发生在那些在网络安全上投入数百万并内部遵循了所有“最佳实践”的公司中。这是因为薄弱环节可能存在于外部，如仍在使用过时系统的供应商或外包合作伙伴。无论黑客最初是如何获得访问权限的，如果敏感信息被泄露，您的公司可能会受到牵连。这意味着仅仅关注公司的内部安全已经不够了。您还必须解决第三方和供应商的风险状况。此外，大多数公司允许员工通过 VPN 或其他客户端工具从员工计算机远程访问企业资源，这又带来了一整套新的漏洞。  
+为解决这个问题，企业必须使其网络安全计划能够减少不必要的实用程序和功能的启动；拒绝不可信可执行文件的启动；限制高风险应用程序的不可接受行为；隔离对端点部分的访问和/或更改；降低可疑应用程序造成损害的可能性；解锁以允许合法使用高风险功能。  
+欲了解更多信息，请下载我们的白皮书：Windows 7 支持已结束 —— 企业管理和保护设备指南  
+The top ten mitigation strategies from the U.S. National Security Agency counter various techniques that APT attackers might use. These measures set priorities for organizations to minimize business impact and are built on the NIST Cybersecurity Framework functions, which aim to manage cybersecurity risks and promote a defense-in-depth approach. The strategies are ranked based on the effectiveness of known APT tactics, and additional strategies and best practices are needed to address new tactics as they emerge.  
+Cybersecurity protection keywords: Identify, Protect, Detect, Respond, Recover  
+Update and upgrade software immediately  
+Keywords: Identify, Protect  
+Apply all available software updates, automate the process as much as possible, and use update services provided directly by vendors. Automation is crucial because attackers often study patches and exploit methods shortly after a patch is released. These "N-day" exploits can be as destructive as zero-day vulnerabilities. Vendor updates must also be genuine to ensure the integrity of the content. If applications are not patched quickly and thoroughly, attackers can carry out intrusions within the defender's patch cycle.  
+Secure privileges and accounts  
+Keywords: Identify, Protect  
+Assign privileges based on risk exposure and maintain them as required for operational purposes. Use Privileged Access Management (PAM) solutions to automate credential management and fine-grained access control. Another method of managing privileges is through tiered administrative access, where each higher tier provides additional access but to fewer individuals. Create procedures to securely reset credentials such as passwords, tokens, and badges. Controlling privileged accounts and services is essential to prevent attackers from gaining administrative access to high-value assets and moving laterally across the network.  
+只能应用一些零信任原则来限制被隔离应用程序在多个维度（如文件、注册表、内存、子进程、权限和网络）上的读写操作。微软的应用程序防护是唯一具备此功能的端点保护平台（EPP）产品，并免费提供给所有Windows企业许可证持有者，但使用率不到1%。企业也可以从其他供应商处购买各种实现。  
+将零信任原则应用于高风险应用程序意味着不允许它们执行潜在恶意操作。这些操作与企业网络安全堆栈中可能拥有的四种类型工具的关系如下所示。应用程序控制分为预执行和后执行（也称作peri执行），因为很少有应用程序控制工具支持后执行，那些支持后执行的工具被认为太难使用。尽管如此，我们可以看到每种工具对高风险应用程序可能应用的零信任缓解措施。  
+涵盖/遗漏的零信任原则：  
+- 应用程序控制（预执行）  
+- 应用程序控制（后执行）  
+- 行为检测（EDR）  
+- 隔离  
+将文件下载到磁盘：否、是、否、是  
+启动/加载磁盘上的文件：是、否、可能、否  
+修改磁盘上已有的关键系统或应用程序文件：否、是、可能、是  
+读取/窃取操作系统或其他应用程序内存中的数据：否、否、可能、是  
+将恶意指令注入另一个应用程序的内存：否、否、可能、是  
+将恶意库加载到另一个应用程序的内存：是、否、可能、是  
+添加/修改注册表键：否、是、可能、是  
+启动并使用操作系统实用程序：是、否、可能、是  
+启动/使用无文件进程：否、是、可能、是  
+接收并执行来自远程对手的命令：否、否、可能、是  
+传输被盗数据：否、否、否、是  
+行为检测（也称作EDR）不是零信任机制。许多“可能”答案需要解释。一个AppJacking攻击可能涉及十个阶段。如果在第三阶段发生检测，并且该检测具有高统计置信度，那么行为检测代理将在一秒钟内终止攻击中识别的所有进程。这可能发生在第四到第六阶段之前，这意味着第七到第十阶段永远不会发生。预防第七到第十阶段可能相当于上表中会被阻止的一个或多个行。但这些都是反应而非零信任拒绝。行为检测代理不会明确阻止第七到第十行的动作。相反，终止相关进程会导致这些原本会发生的行为被终止。从默认拒绝的角度来看，行为检测不是零信任机制。零信任机制本质上是确定性的：允许/拒绝特定动作。  
+在端点内添加零信任到网络安全防御对于缓解AppJacking风险和降低劳动力成本至关重要。优秀的医疗保健包括预防措施，如疫苗以避免感染，以及早期检测方法以治疗疾病。企业的网络安全防御也是如此，两者结合更好。检测工具可以击败可识别的恶意软件攻击。零信任工具不是通过识别恶意软件，而是通过阻止其有害行为来击败攻击。一种工具可以阻止另一种工具错过的，或者比另一种工具更早地阻止。这是优秀的网络安全防御。  
+通过零信任工具阻止检测工具错过的内容，并在检测工具反应之前阻止一些可检测的攻击，添加一个在端点内应用零信任的工具可以减少网络安全堆栈中多个检测工具的警报数量，从而减轻相应网络安全团队的工作负担。此外，端点内的零信任控制在实时阻止攻击，这通常发生在端点被攻破之前。这样的工具可以在检测工具在端点被攻破后做出反应时减轻那些必须修复端点的人的工作负担。  
+隔离看起来很好但很少部署，因为大多数实现都非常痛苦。这个话题值得单独一篇博客文章。简而言之，有几种不同的隔离工具。主机沙箱不同于网络或云沙箱，它是一个垃圾场，几年前就被企业端点移除了。微软提供的“应用程序防护”采用了进程虚拟化。这要求修改应用程序源代码，以便应用程序能够穿透边界在整个端点上工作。很少有应用程序经过这样的修改。“应用程序防护”随Windows企业许可证免费提供，但不到1%的企业选择使用它。Bromium基于驱动的隔离工具也遭受了与主机沙箱相同的命运。几乎没有EPP包含隔离功能。必须从第三方获取这些功能。  
+AppGuard提供了企业所需以补充检测防御的零信任能力。AppGuard结合了“隔离”和“预执行应用程序控制”，相当于上表中总结的因AppJacking导致的有害操作的所有“是”条目，详细信息见底部表格。  
+与其他方案相比，AppGuard的操作工作量较小。AppGuard几乎不受过去和现在的应用程序控制或隔离工具的操作困难的影响。AppGuard确实需要一些前期调优，如果受保护主机进行了重大更改，有时后期也需要调优。在策略未强制执行的短暂发现阶段，可以看到一个或少数几个合法应用程序需要进行策略调优。在策略强制执行的第一周或两周内，可能还需要一些额外的调优。根据观察，部署代理中不到1%的策略与供应商指定的默认策略不同，这种调优工作量很小且很短暂。

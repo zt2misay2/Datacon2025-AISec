@@ -1,0 +1,9 @@
+A Practical Scenario  
+Secure privileges and accounts  
+Keywords: Identify, Protect  
+Assign privileges based on risk exposure and maintain them as required for operational purposes. Use Privileged Access Management (PAM) solutions to automate credential management and fine-grained access control. Another method of managing privileges is through tiered administrative access, where each higher tier provides additional access but to fewer individuals. Create procedures to securely reset credentials such as passwords, tokens, and badges. Controlling privileged accounts and services is essential to prevent attackers from gaining administrative access to high-value assets and moving laterally across the network.  
+由于COVID-19危机，大多数员工预计将在传统环境之外工作。此外，随着远程工作因各种原因成为常态，组织可以利用这个机会建立适合传统和远程环境的强大网络安全态势。重要的一点是，网络安全挑战不仅涉及技术，而且以人为本的解决方案也是必不可少的。适用于一个组织的最佳方案可能并不适合其他组织  
+构建基于角色的网络安全培训计划  
+有效的员工网络安全准备培训可以减轻主要风险。给接待员和IT系统管理员提供相同的培训可能比不培训更糟糕。他们对风险（太低）和缓解措施（太高）的看法差异很大。集中培训很快会被遗忘，警惕性的暂时提高会回到粗心大意的状态。人的问题需要人的解决方案。专业提示：个性化员工网络安全准备培训。通过模拟钓鱼等手段挖掘数据，找出高风险员工。使用针对不同角色定制的内容。使准备成为一个持续的过程，教导、激励并强化  
+寻找暴露的杂项错误  
+根据Verizon DBIR 2019报告，“杂项错误”是金融、保险、教育、医疗保健、信息、公共管理、零售和技术服务领域前三大违规模式之一。专业提示：只有冗余的、主动的流程才能解决这些人为造成的症状。您的员工应维护并寻求“错误”Top 10/25/100列表，并与同行合作维护这些列表。优先处理高影响漏洞。寻找方法进行隔离以减少暴露

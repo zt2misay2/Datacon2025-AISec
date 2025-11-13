@@ -1,0 +1,29 @@
+In this article, we start from Gartner's definition of threat intelligence and explore the several components it involves: context, indicators, and actionable advice.
+Data, Information, and Intelligence
+The threat intelligence provider Recorded Future once wrote an article to analyze the differences between data, information, and intelligence. If interested, you can read it by visiting the link in the reference resources. Compared to many articles that borrow heavily from military and business fields, making threat intelligence seem obscure, Recorded Future's article is more grounded in cybersecurity. In my opinion, the mainstream application scenarios of threat intelligence combined with SOC/SIEM are far from comparable to military intelligence. First, we need to thoroughly collect and clean up multi-dimensional data. Only after completing these tedious and exhausting tasks and building the superstructure on top of them can we have a truly reliable foundation.
+Among the concepts of data, information, and intelligence, the definition of data is relatively clear, which can be understood as a record of a large number of independent objective facts. Information and intelligence, on the other hand, are different levels of conclusions obtained based on the processing of data. The following diagram, widely cited, expresses a basic process and relationship:
+However, the distinction between information and intelligence is quite subtle. After reading various articles attempting to explain their differences, I still cannot draw a clear line between them. From the perspective of usefulness and inheritance, let me put down the entanglement for a moment with a very inappropriate analogy: data can be seen as poppies, information as opium, and intelligence as heroin.
+根据身份盗窃资源中心(ITRC)上个月发布的《2021年回顾报告》,我们推断出几乎一半的2021年数据泄露是由于端点保护失败造成的。这个推断是合理的,但需要承认这个数字最多只是近似值。尽管如此,它对于设定2022年的网络安全堆栈和安全运营优先级仍然有用。需要在端点提供更多保护。
+为什么这个端点保护失败的数字很重要
+没有人的预算足够支付所有可能的风险缓解措施。决策者必须选择哪些措施可能以最低的成本产生最大的影响。他们已经为多层次的网络安全堆栈提供了资金,以实现纵深防御。人员成本通常远高于工具成本。所有组织至少在每个端点上都有一个基于软件的防御(例如,传统的防病毒软件、端点保护平台)。其他层次部署在端点之前(即边界)、周围(例如,入侵检测、实体用户行为分析等)和之后(SIEM、XDR等)。来自端点防御的警报也应被视为涉及端点防御之后的资源,因为直到分析师调查后才会阻止或终止任何事情。而且,不要忘记补救和其他事件后的成本。
+完美的预防性端点保护将大大减少“周围”和“之后”层的人员工作量。相反,更多的端点保护失败会增加“周围”和“之后”的成本。这也增加了风险,因为当人员追查大量相对低影响的事件时,他们无法处理高影响的事件。警报疲劳也会降低人员效率,从而增加风险。
+决策者总是在众多潜在的网络安全投资中挣扎选择。声称2021年46%的数据泄露是由于端点保护失败造成的,这意味着有了这个数字比没有这个数字更容易选择改进措施。这样做可以改善整体风险缓解并降低IT/安全运营成本。
+我们如何得出这个数字以及为什么它可能低估了原因
+该报告将“网络攻击”数据泄露的原因分类为:“钓鱼/短信钓鱼/BEC”、“勒索软件”、“恶意软件”、“非安全云环境”、“凭证填充”、“未修补的软件漏洞”、“零日攻击”、“其他-未指定”,以及“NA”(未定义)。我们排除了未归因的泄露事件,然后将“勒索软件”(33%)、“恶意软件”(13%)、“未修补的软件漏洞”(0.4%)和“零日攻击”(0.4%)的个别原因合并到我们得出的“端点保护失败”数字(46%)。这些数字仅适用于那些归因了根本原因的数据泄露事件。
+钓鱼攻击可能涉及社会工程、恶意软件或两者兼有。我们无法说有多少比例的钓鱼攻击涉及恶意软件。多年来,Verizon数据泄露调查报告背后的专家告诉我们,事件/泄露提交往往存在问题。一些钓鱼攻击可能涉及恶意软件,但未被分类为恶意软件。同样,许多甚至大多数组织缺乏快速识别由于“未修补的软件漏洞”或“零日攻击”导致的事件/泄露所需的取证能力。因此,由于端点保护失败而导致的数据泄露很可能被低估了。
+“零日攻击”的数字并不令人惊讶。它们一直占很小的比例,因为还有许多其他方式可以破坏企业。然而,同比增幅达到了300%。不过,2021年确实比2020年报告了更多的零日漏洞。
+2021年勒索软件和恶意软件导致的数据泄露增加
+报告显示,2021年勒索软件导致的数据泄露比2020年增加了122%。同样,恶意软件导致的数据泄露增加了34%。
+2021年数据泄露比2020年增加了84%
+ITRC的数据表明,2021年和2020年分别有1,613起和878起由网络攻击引起的数据泄露。这相当于增长了83.7%。许多人认为这是由于更多的人在家工作,这意味着对端点保护的依赖更大。
+三分之一的泄露事件未归因于根本原因
+这对上述所有数字意味着什么?我们只能猜测。然而,这确实说明了很多潜在信息有助于每个人做出更好的决策。你可能已经注意到,公开的数据泄露报告很少具体说明哪些网络安全防御失败及其方式。
+恶意软件“检测差距”使每个人都处于风险之中
+我们认为,企业防御过于依赖检测技术,而这些技术未能识别恶意文件和行为的几乎无限种类。更糟糕的是,太多组织依赖低端的基于检测的防御。有些防御效果远好于其他。但即使是最好的防御也会失败。而且,最好的防御越来越多地在检测和应对复杂的恶意软件攻击时,是在一个或多个端点和凭证被攻破后数小时到数月才进行。这种情况发生得越晚,清理成本和财务影响就越大。
+3 – Google:2022年的许多零日漏洞是已知漏洞的变种
+在回顾去年在野外被利用的零日漏洞时,Google 发现大约40%的漏洞基于之前报告的漏洞。这种现象背后的原因有几个,包括软件制造商有时没有完全修补漏洞,例如未解决其根本原因,这使得精明的攻击者可以通过不同的途径触发该漏洞。“我们认为只有当补丁既正确又全面时,才是完整的。正确的补丁是指以完全准确的方式修复漏洞,意味着该补丁不再允许任何对该漏洞的利用。”报告中写道。Google 建议软件制造商在制作补丁时采取以下措施:找到漏洞的真实根本原因,而不仅仅是它被利用的方式;识别漏洞可能存在的其他位置;评估攻击者可能用来利用漏洞的其他路径;确定是否有绕过补丁的方法。报告还指出,2022年有41个在野外被利用的零日漏洞,低于2021年的69个;在这41个漏洞中,17个是已知漏洞的变种;Android 用户通常需要等待“相当长”的时间才能获得针对零日漏洞的补丁。(来源:Google 威胁分析组,2023年7月)
+说到已知漏洞,美国和国际网络安全机构本周发布了一份联合公告,详细列出了2022年最常被利用的漏洞。Tenable 安全响应团队在其博客“AA23-215A:2022年最常被利用的漏洞”中对此进行了深入报道。要了解有关 Google 发现的更多细节,请查看完整报告。有关错误软件补丁主题的更多信息:“草率的软件补丁是一个‘令人不安的趋势’”(Wired);“零日计划看到失败的补丁数量增加”(TechTarget);“补丁不完美:软件修复未能阻止攻击者”(Dark Reading);“补丁疯狂:厂商漏洞公告已经失效,严重失效”(Dark Reading)
+4 - IBM:数据泄露成本持续上升
+数据泄露会让你付出高昂代价。这是 IBM 的《2023年数据泄露成本报告》的主要发现,该报告将全球平均成本定为445万美元——比三年前增长了15%。好消息是什么?根据研究,如果你广泛使用利用人工智能和自动化的安全工具,你可以将数据泄露造成的财务损失平均减少176万美元。原因是?你将能够更快更有效地检测和遏制泄露。此外,拥有成熟 DevSecOps 流程的组织表现更好,其平均数据泄露成本比那些 DevSecOps 流程不太成熟或根本没有的组织低168万美元。其他发现包括:在各种泄露成本中,检测和升级费用增幅最大,与上一年相比增长了42%;95%的被分析组织经历了多次数据泄露,但只有一半的被泄露组织计划增加安全投资;使用 AI 和自动化安全工具的组织的数据泄露生命周期平均缩短了108天;通知执法部门的勒索软件受害者平均节省了47万美元的数据泄露成本,而未涉及执法部门的受害者则没有;在40%的数据泄露中,攻击者跨多个环境(公共云、私有云和本地)破坏了数据;医疗保健行业的数据泄露平均成本飙升至近1100万美元,自2020年以来增长了53%,而关键基础设施的数据泄露成本从去年的水平增长了4.5%,达到504万美元。该报告现已进入第18个年头,由 Ponemon Institute 进行,基于对2022年3月至2023年3月期间全球553个组织遭受的真实世界数据泄露的分析。要获取更多详细信息,请查看报告的主页、关于它的博客、公告和78页的报告本身。您还可以观看这段视频
+5 - 白宫应对网络安全技能短缺
+拜登政府本周启动了国家网络安全劳动力和教育战略,旨在解决美国合格网络安全专业人员短缺的问题。普遍认为这是一个严重的问题。据美国国家标准与技术研究院的 Cyberseek 数据显示,美国约有663,000个空缺的网络安全职位,相当于约30%的职位空缺率。(来源:Cyberseek,2023年8月1日)国家网络安全劳动力和教育战略基于四个支柱:通过向每个人提供学习网络安全的机会,使所有美国人都具备基本的网络安全技能;从基础教育到大学,包括社区学院和技术学校,彻底改革网络安全教育;通过促进基于技能的招聘等方式,扩大和增强美国的网络安全劳动力;通过降低招聘和入职障碍等方式,加强联邦网络安全劳动力。多个联邦机构参与了这项倡议,还有私营部门公司、非营利组织和教育机构。要获取更多详细信息,请阅读白宫的公告、国家网络安全劳动力和教育战略主页和60页的项目描述。

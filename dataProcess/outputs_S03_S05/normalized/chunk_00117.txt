@@ -1,0 +1,25 @@
+有一个关于基于AI的网络安全产品的想法?你可以在一个新的竞赛中赢得数百万美元。同时,NIST已经起草了CSF 2.0的重大修订,并希望听取您的意见。此外,还有一个新的免费工具可以标记公共AI模型中的安全漏洞。另外,大多数云安全漏洞是由凭证错误引起的。还有更多内容!深入了解截至8月11日这一周最值得关注的六件事。
+
+白宫和国防高级研究计划局(DARPA)本周公布了一项为期两年、奖金约2000万美元的竞赛,旨在促进基于AI的网络安全产品的发展。在拉斯维加斯举行的Black Hat USA 2023会议上宣布的人工智能网络挑战赛(AIxCC)吸引了计算机科学家、AI专家、软件开发人员和网络安全大师参与。AI供应商Anthropic、Google、Microsoft和OpenAI将通过提供其技术和专业知识来支持参与者,而开源安全基金会(OpenSSF)将担任顾问。小企业可以通过“资助赛道”参与,该赛道将为七家中小企业提供资金支持。其他所有人均可通过“公开赛道”参加。提交提案后,最多将有20个团队被选中参加2024年8月在DefCon举行的半决赛。得分最高的五个团队将获得奖金,并进入2025年8月在DefCon举行的决赛。“如果成功,AIxCC不仅会产生下一代网络安全工具,还将展示如何使用AI通过保护其关键基础设施来更好地服务于社会,”DARPA的AIxCC项目经理Perri Adams在一份声明中表示。要获取更多详情,请查看白宫的公告,DARPA的公告,OpenSSF的公告和AIxCC网站。
+
+美国国家标准与技术研究院(NIST)希望您——是的,就是您!——对其本周发布的《网络安全框架2.0》草案发表评论。作为对该框架的一次“重大更新”,该草案扩大了范围,增加了第六个功能“治理”,并通过修订指南简化了实施。例如,该框架最初专门针对保护美国关键基础设施组织,但现在旨在涵盖全球所有类型的组织,无论其规模、类型和行业领域。与此同时,新增的“治理”功能旨在解决风险管理策略、组织背景、网络安全供应链风险管理以及政策、流程和程序等领域的问题。其他五个功能包括:识别,专注于评估组织的网络风险;保护,关于采取措施防止和减少网络风险;检测,集中于发现和分析网络攻击和泄露;响应,致力于在网络事件发生后采取行动;恢复,专注于受影响资产和运营的恢复。“NIST网络安全框架(Framework或CSF)2.0提供了减少网络安全风险的指导,帮助组织理解和评估这些风险,确定优先级并沟通降低这些风险的行动,”草案文件写道。想与NIST分享您对这个CSF 2.0草案的反馈吗?您可以发送电子邮件至[email protected],直到2023年11月4日。NIST特别希望了解公众是否认为该草案解决了当前和预期的网络安全挑战,并符合既定的做法和指南。NIST预计将在2024年初发布CSF 2.0的最终版本,届时它将正式取代2018年发布的CSF 1.1。要获取更多详情,请查看CSF的主页,NIST的公告,一个草案摘要和完整的52页草案文件。
+裸金属服务器、数据保护与隐私:来自Intel的Mike Ferron-Jones合作撰写。面对严峻的网络威胁环境,企业正在寻找新的数据保护和隐私解决方案及最佳实践。OVHcloud的新款Advance-6裸金属服务器配备了第三代Intel® Xeon®可扩展处理器(以前代号为“Ice Lake”)和Intel®软件保护扩展(Intel SGX)。这些技术提供了更高的性能,并利用机密计算来实现数据隐私、法规遵从性和更强的数据保护。阅读本文以了解更多关于机密计算的信息以及如何从中受益。
+
+现代业务转型的核心在于数据处理能力的提升。随着世界变得更加互联,企业面临数据收集、使用和存储的增长。为了应对这一挑战,云和数据分析等新解决方案不断涌现,正在改变业务运营方式。然而,如果忽视安全问题,这些变化也可能带来更大的风险。我们认为,安全、隐私和合规性必须与业务转型并行推进。因此,我们使用Intel® SGX构建了Advance-6裸金属服务器——它为客户提供了机密计算和增强的数据保护。虽然磁盘和网络加密可以在数据存储或传输时提供保护,但传统上,在数据被CPU和内存使用时是脆弱的。Intel SGX创建了硬件保护的“飞地”,旨在在数据使用时屏蔽数据和代码免受未经授权的方或软件的侵害。飞地内的数据和代码对云管理员或软件堆栈不可访问,从而帮助组织遵守GDPR和其他法规的要求。
+
+通过机密计算应对安全挑战变得尤为重要。企业数据正面临黑客、未经授权的第三方和恶意内部人员的更大威胁,他们经常利用应用程序中的漏洞,或操作系统和虚拟机监控程序层中的特权提升。随着软件安全性的提高,攻击者开始向下移动到堆栈中寻找新的漏洞,这使得商业机密或受监管的数据面临风险。数据泄露可能导致严重的经济损失和声誉损害。这意味着外围防御已不再足够。需要的是多层次的防御策略,使成功执行攻击变得不可行。机密计算技术对于此类策略至关重要,因为它使用基于硬件的方法将数据隔离在可信飞地中并在内存中对其进行加密。这可以保护数据免受操作系统和虚拟机监控程序层中的漏洞的影响,并确保即使具有完全访问权限的用户也无法在没有密钥的情况下解密数据。
+
+机密计算也是“合规计算”。欧洲在隐私和数据保护方面处于世界领先地位,处理个人或受监管数据的组织需要采取措施来最小化违规或违反的风险。这意味着部署行业最佳实践和最新的隐私保护技术,以维护数据安全、主权和控制。使用Intel SGX的机密计算可以成为合规制度的关键部分,并有助于降低监管风险。即使是像OVHcloud这样的云提供商也无法访问飞地内受保护的数据。此外,OVHcloud提供认证服务,使客户能够获得加密验证,确认其工作负载运行在真正的Intel SGX硬件上,微代码是最新的,软件负载正是预期的。认证有助于确保客户的数据受到保护并符合规定。
+
+Advance-6裸金属服务器提供了增强的性能,同时使解决方案能够快速大规模部署。它受益于PCIe Gen4和数据中心级NVMe磁盘,从而提高了带宽。OVHcloud链路聚合功能使两台服务器的物理网络链接能够聚合,以实现最佳网络速度。Advance-6服务器还包含第三代Intel® Xeon®可扩展处理器,该处理器通过Intel® 10nm工艺提高了每核性能。它们还包含驱动机密计算的技术——Intel® SGX。Intel® SGX在CPU级别内置,使数据能够在可信的加密飞地中隔离。Intel® SGX还提供:即使操作系统/驱动程序/BIOS/VMM/SMM被破坏,也能防止攻击;即使攻击者完全控制平台,也能增加对秘密(数据/密钥/密码)的保护;防御针对内存总线窥探、内存篡改和针对RAM的“冷启动”攻击。
+
+以下是一些机器学习和密码学中的示例:
+安全多方计算
+组织经常需要协作,但由于保密或法规原因,共享数据是被禁止的。安全多方计算是一种隐私保护技术,使多方能够汇集他们的数据并产生更准确的结果,同时保持每个方的数据对其他方的私密性。各方都可以使用认证功能来验证其“数据洁净室”是否正常运行并且软件是他们所期望的。Intel SGX今天用于多党医疗研究和金融欺诈检测用例。
+联邦学习
+联邦学习是一种隐私保护机器学习(PPML)方法,它将算法部署到分散的设备或站点,以便从太大或太敏感而无法移动到公共数据洁净室的数据中创建联合分析。在这种用例中,算法在进行分析时受到Intel SGX飞地的保护。去除任何私人信息后,结果会传递到中央节点,与其他节点的结果结合,并将新的权重或参数推送到远程模型。这确保敏感数据不会暴露于威胁,并帮助组织构建更准确的模型。
+On April 16, ten cybersecurity vendors set up booths at the RSA Conference 2018 Innovation Sandbox to showcase their cutting-edge technologies. These ten finalists, selected by the RSA Conference judges, covered a range of areas including deception, threat detection, network security, encryption, cloud security, and container security.
+A panel of judges, consisting of venture capitalists, entrepreneurs, and industry veterans, chose BigID as the "Most Innovative Startup" in the 2018 RSA Conference Innovation Sandbox competition.
+BigID CEO Dimitri Sirota expressed, "We are honored to have competed with such an outstanding group of companies and are thrilled to be awarded this prize. We believe that privacy is a 21st-century issue that all companies must take seriously, and we hope that we can help businesses alleviate the challenges of handling privacy."
+Linda Gray Martin, Director and General Manager of the RSA Conference, highlighted, "The long-standing tradition of the RSAC Innovation Sandbox inspires innovation in the security industry. It's crucial for our industry to stay innovative, and it's noteworthy that these innovations no longer necessarily come from Silicon Valley. This year, we saw a record number of applications from outside California. Emerging tech hubs with growing influence in cybersecurity include Tel Aviv, Denver, and the D.C. area, and it's great to see these startups taking the stage."
+"In a fiercely competitive field, BigID stood out for its unique ability to help enterprises better protect customer and employee data. We are confident that BigID will make a significant impact in the cybersecurity industry over the next few years."

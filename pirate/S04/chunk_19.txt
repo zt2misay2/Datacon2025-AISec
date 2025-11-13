@@ -1,0 +1,34 @@
+The top ten mitigation strategies from the U.S. National Security Agency counter various techniques that APT attackers might use. These measures set priorities for organizations to minimize business impact and are built on the NIST Cybersecurity Framework functions, which aim to manage cybersecurity risks and promote a defense-in-depth approach. The strategies are ranked based on the effectiveness of known APT tactics, and additional strategies and best practices are needed to address new tactics as they emerge.
+Cybersecurity protection keywords: Identify, Protect, Detect, Respond, Recover
+Update and upgrade software immediately
+Keywords: Identify, Protect
+Apply all available software updates, automate the process as much as possible, and use update services provided directly by vendors. Automation is crucial because attackers often study patches and exploit methods shortly after a patch is released. These "N-day" exploits can be as destructive as zero-day vulnerabilities. Vendor updates must also be genuine to ensure the integrity of the content. If applications are not patched quickly and thoroughly, attackers can carry out intrusions within the defender's patch cycle.
+Secure privileges and accounts
+Keywords: Identify, Protect
+Assign privileges based on risk exposure and maintain them as required for operational purposes. Use Privileged Access Management (PAM) solutions to automate credential management and fine-grained access control. Another method of managing privileges is through tiered administrative access, where each higher tier provides additional access but to fewer individuals. Create procedures to securely reset credentials such as passwords, tokens, and badges. Controlling privileged accounts and services is essential to prevent attackers from gaining administrative access to high-value assets and moving laterally across the network.
+3 – Google：2022年的许多零日漏洞是已知漏洞的变种
+在回顾去年在野外被利用的零日漏洞时，Google 发现大约40%的漏洞基于之前报告的漏洞。这种现象背后的原因有几个，包括软件制造商有时没有完全修补漏洞，例如未解决其根本原因，这使得精明的攻击者可以通过不同的途径触发该漏洞。“我们认为只有当补丁既正确又全面时，才是完整的。正确的补丁是指以完全准确的方式修复漏洞，意味着该补丁不再允许任何对该漏洞的利用。”报告中写道。Google 建议软件制造商在制作补丁时采取以下措施：找到漏洞的真实根本原因，而不仅仅是它被利用的方式；识别漏洞可能存在的其他位置；评估攻击者可能用来利用漏洞的其他路径；确定是否有绕过补丁的方法。报告还指出，2022年有41个在野外被利用的零日漏洞，低于2021年的69个；在这41个漏洞中，17个是已知漏洞的变种；Android 用户通常需要等待“相当长”的时间才能获得针对零日漏洞的补丁。（来源：Google 威胁分析组，2023年7月）
+说到已知漏洞，美国和国际网络安全机构本周发布了一份联合公告，详细列出了2022年最常被利用的漏洞。Tenable 安全响应团队在其博客“AA23-215A：2022年最常被利用的漏洞”中对此进行了深入报道。要了解有关 Google 发现的更多细节，请查看完整报告。有关错误软件补丁主题的更多信息：“草率的软件补丁是一个‘令人不安的趋势’”（Wired）；“零日计划看到失败的补丁数量增加”（TechTarget）；“补丁不完美：软件修复未能阻止攻击者”（Dark Reading）；“补丁疯狂：厂商漏洞公告已经失效，严重失效”（Dark Reading）
+4 - IBM：数据泄露成本持续上升
+数据泄露会让你付出高昂代价。这是 IBM 的《2023年数据泄露成本报告》的主要发现，该报告将全球平均成本定为445万美元——比三年前增长了15%。好消息是什么？根据研究，如果你广泛使用利用人工智能和自动化的安全工具，你可以将数据泄露造成的财务损失平均减少176万美元。原因是？你将能够更快更有效地检测和遏制泄露。此外，拥有成熟 DevSecOps 流程的组织表现更好，其平均数据泄露成本比那些 DevSecOps 流程不太成熟或根本没有的组织低168万美元。其他发现包括：在各种泄露成本中，检测和升级费用增幅最大，与上一年相比增长了42%；95%的被分析组织经历了多次数据泄露，但只有一半的被泄露组织计划增加安全投资；使用 AI 和自动化安全工具的组织的数据泄露生命周期平均缩短了108天；通知执法部门的勒索软件受害者平均节省了47万美元的数据泄露成本，而未涉及执法部门的受害者则没有；在40%的数据泄露中，攻击者跨多个环境（公共云、私有云和本地）破坏了数据；医疗保健行业的数据泄露平均成本飙升至近1100万美元，自2020年以来增长了53%，而关键基础设施的数据泄露成本从去年的水平增长了4.5%，达到504万美元。该报告现已进入第18个年头，由 Ponemon Institute 进行，基于对2022年3月至2023年3月期间全球553个组织遭受的真实世界数据泄露的分析。要获取更多详细信息，请查看报告的主页、关于它的博客、公告和78页的报告本身。您还可以观看这段视频
+5 - 白宫应对网络安全技能短缺
+拜登政府本周启动了国家网络安全劳动力和教育战略，旨在解决美国合格网络安全专业人员短缺的问题。普遍认为这是一个严重的问题。据美国国家标准与技术研究院的 Cyberseek 数据显示，美国约有663,000个空缺的网络安全职位，相当于约30%的职位空缺率。（来源：Cyberseek，2023年8月1日）国家网络安全劳动力和教育战略基于四个支柱：通过向每个人提供学习网络安全的机会，使所有美国人都具备基本的网络安全技能；从基础教育到大学，包括社区学院和技术学校，彻底改革网络安全教育；通过促进基于技能的招聘等方式，扩大和增强美国的网络安全劳动力；通过降低招聘和入职障碍等方式，加强联邦网络安全劳动力。多个联邦机构参与了这项倡议，还有私营部门公司、非营利组织和教育机构。要获取更多详细信息，请阅读白宫的公告、国家网络安全劳动力和教育战略主页和60页的项目描述。
+关键基础设施、端点保护和零日攻击是当前网络安全领域的重要议题。行业分析师指出，企业主要依赖或完全依赖基于检测的网络安全防御技术。然而，他们的报告也揭示了仅靠基于检测的工具是不够的原因。根据Verizon DBIR的数据，从2019年到2020年，违规事件数量增加了33%，达到5,258起，而2018年至2019年间这一数字增加了96%。Mandiant在2020年的网络事件调查中发现，65%的受攻击组织在第一周内没有发现攻击。尽管机器学习被广泛应用，但它并没有神奇地填补这些昂贵的检测空白。本文接下来将探讨为什么检测未能达到预期效果，并简要介绍企业需要什么以及如何实现。
+
+SolarWinds Orion供应链攻击提供了两个重要教训。一些目标组织的日志数据中包含许多该攻击的指标，但他们的安全运营中心直到行业指南发布后才解读这些数据。这是基于检测的网络安全防御技能差距的一个典型案例。其他组织被发现保留日志数据的时间太短，有些受影响的公司在七天后就删除了数据。
+
+利用现有环境进行攻击时，威胁行为者常常模仿合法工作流程以愚弄检测系统。行业分析师称，这类攻击是最难高置信度检测的。请注意，最后一个限定词。渗透测试人员和实际威胁行为者公开表示，他们故意使攻击树与合法工作流程相似以避免被检测。
+
+威胁行为者通过修改已知恶意文件来愚弄检测系统。文件操作方法多种多样。可以轻易使用“打包器”修改可执行文件而不破坏其功能，然后将其上传到VirusTotal，后者会返回数十个检测供应商的假阴性结果。这个短视频展示了某人如何修改2017年的WannaCry可执行文件，使AV/EDR工具无法识别上传到VirusTotal的文件。
+
+对手仍然可以通过不同的编程语言重新编译源代码来绕过检测。将文件上传到云端进行分析也不够，因为恶意软件有时会暂时休眠或在虚拟环境中表现不同以逃避检测。
+
+机器学习（ML）不是人工智能；它只是统计学。基于ML的检测工具擅长检测以前见过的和非常类似的东西。避开它们只需要一点额外的努力。从根本上说，ML可以被愚弄，因为它不能利用抽象。它统计上将事物与其他事物相关联，而不知道每个事物是什么。因此，向基本攻击树中添加无关紧要的事物会破坏相关性，从而混淆识别。例如，对手通过在阶段之间插入暂停、插入不必要的阶段，以及将合法文件中的无害二进制片段附加到恶意文件上来修改先前被识别的攻击，以愚弄ML。有许多反ML技术。有些甚至使用ML工具来研究如何愚弄基于ML的检测工具。在恶意软件攻击头条新闻的背后，往往是被愚弄的基于ML的检测工具。
+
+禁用的端点代理听不到也报告不了任何信息。Mandiant发现，在2020年的网络事件/违规调查中，有9.8%涉及Mitre ATT@CK的T1562技术，该技术终止或使端点安全工具失效。Ryuk、REvil、SolarWinds等许多攻击都使用了这种技术。离线大约一个小时的代理通常不会被调查，即使被注意到也是如此。攻击者在这段时间内可以相当活跃。这强调了实时阻止攻击的重要性。
+
+当攻击未立即被阻止时，凭据首先被盗，随后其他端点也会被攻陷。2021年Verizon DBIR发现，凭据是最常见的被盗数据类型。所有调查的企业违规事件中有超过40%涉及被盗凭据。第一个端点之后会有许多其他端点。对手手中有一些工具可以自动化查找、捕获和使用特权Windows凭据来攻破域管理员凭据。这些工具可以快速且嘈杂地运行，也可以缓慢且隐蔽地运行。2021年Verizon DBIR还观察到，凭据盗窃不仅针对大型企业。攻击工具使得这样做变得太容易了。有些工具专门设计用来规避EDR检测。警告：试图理解这些规避方法的工作原理可能会导致脑动脉瘤。
+
+分析师称，人为控制的攻击几乎总是能击败检测工具。人为控制的攻击要求对手至少在一个目标主机上运行一个远程控制进程。攻击工具本身是模块化的，由许多不同的攻击组成，可以按需选择。一旦他们发现正在运行的主机保护，就可以调整他们的行动。不同的攻击载荷有的安静，有的嘈杂，对某些防御更有效，对其他防御则不然，并具有多种禁用或规避检测的方法。
+
+一些行业分析师称，此类攻击总是能够成功渗透企业。然而，这种描述是轶事性的，并非统计意义上的推断。这些广泛的断言基于对攻击者迅速获得反馈的理解，即哪些方法有效，哪些无效。趋势表明，威胁行为者越来越多地使用攻击工具，如下面图表所示，因为它们成功地击败了基于检测的防御。Cobalt Strike最初是一个渗透测试工具，是进行人为控制攻击的威胁行为者的首选武器（图表来自Mandiant M-Trends 2021）。

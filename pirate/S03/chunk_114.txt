@@ -1,0 +1,48 @@
+This article represents the views of CSO, a news media platform under IDG Consulting. Security threats are constantly evolving and tend to follow trends. As long as a certain type of threat is highly successful and profitable, cybercriminals will imitate it. Therefore, the best defense is to identify these threat trends and take the initiative in threat detection. In line with this perspective, Gartner rated the "Top 11 Information Security Technologies for 2017" in June. We focused on the hottest technology categories mentioned by Gartner for 2017, delved into the latest cybersecurity products and services, and selected 22 of the most innovative and practical products for 2017. These products have all been tested in local test platforms or production environments provided by the vendors. They address some of the most destructive security threats currently. The following products are listed in alphabetical order.
+Acalvio ShadowPlex
+Category: Deception Technology
+Deception technology is an emerging field, and simple and effective deployment technologies have often been at a bottleneck. Acalvio ShadowPlex sets an example in overcoming these technical difficulties. It provides customers with an unlimited number of deception assets, avoiding frequent maintenance and cost inputs. These deception points can be activated immediately when needed, locking onto attackers and continuously tracking them to obtain valuable threat intelligence. The tool then either conducts its own tracking or integrates with SIEMs like Splunk to remove the threats from the protected network.
+账户接管欺诈预防和检测的全面指南。长期以来，账户接管欺诈（ATO）一直困扰着金融机构。随着数字银行革命和电子商务的蓬勃发展，ATO欺诈变得更加猖獗。21世纪初见证了账户接管攻击的兴起，狡猾的欺诈者利用网络钓鱼陷阱诱骗毫无戒心的客户。他们赌的是客户在浏览这个全新的在线银行世界时的天真，而这一赌注得到了回报。
+
+现代的ATO战场是一个金融机构努力对抗ATO欺诈侵袭的地方。随着客户变得越来越聪明，金融机构加强了防御，同时网络犯罪分子也在进化。他们转向了社会工程学和恶意软件攻击等黑暗手段。与此同时，年度损失飙升至数十亿美元。
+
+不必担心，因为金融守护者已经迎接挑战，掌握了尖端的安全措施。多因素认证、行为生物识别和基于机器学习的欺诈检测系统成为保护客户资产的坚定守护者。
+
+让我们深入探讨什么是账户接管欺诈，它是如何执行的，以及可以采取什么措施来应对它。
+
+什么是账户接管欺诈？账户接管欺诈是一种网络犯罪，未经授权的人访问并控制他人的在线账户。他们的典型意图是窃取资金或个人信息。ATO欺诈可以影响企业和个人，导致财务损失和声誉损害。
+
+三种类型的账户接管欺诈包括凭证填充、网络钓鱼和中间人攻击。让我们更仔细地研究每一种。
+凭证填充是一种险恶的网络攻击策略，它释放大量之前被盗的用户名-密码组合。凭证填充的目标是获得对用户账户的未授权访问。这种偷偷摸摸的技术利用了人类不幸的习惯，即在多个平台上重复使用登录凭据。充分利用这一弱点，欺诈者巧妙地利用数据泄露的宝库为自己谋利。通过接管热门网站上的账户，犯罪分子盗取身份、进行金融欺诈，甚至挟持客户的数字生活。教育客户了解ATO欺诈的危险性。
+
+网络钓鱼是欺诈者用来诱骗毫无戒心的个人泄露敏感信息（如登录凭据）的一种狡猾且欺骗性的技术。就像大师级的魔术师一样，网络罪犯制作出看起来很真实的电子邮件、短信，甚至是社交媒体消息。借助生成式AI等新技术，他们很容易冒充合法企业或可信联系人。欺诈者的最终目标是诱使受害者点击有害链接或下载受感染的附件。这两种行为都可能危及某人的数字生活。这些虚拟骗子通过利用人类的好奇心、信任和紧迫感，骗取巨额资金或窃取宝贵的数据。为了帮助您的客户避免成为当天的猎物，鼓励他们保持警惕。每个人都应该仔细检查任何看起来可疑的通信来源。谨慎可以帮助我们都在互联网的广阔海洋中安全游泳。
+
+中间人攻击是一种险恶形式的数字窃听。欺诈者巧妙地拦截并操纵两个毫不知情的当事方之间的通信。这些网络罪犯伪装成对话中的可信实体，欺骗他们的目标相信自己正在与合法对手打交道。通过控制信息流，这些数字木偶大师可以窃取敏感数据、注入恶意内容，甚至破坏交易。有价值的信息、金钱收益和利用漏洞的能力驱使欺诈者采用这种险恶的技术。
+
+ATO欺诈中常见的三种方法包括社会工程学、恶意软件和暴力破解攻击。让我们看看这三种险恶的ATO方法，每一种都允许欺诈者控制受害者的在线账户。
+社会工程学是一种利用人类心理学的技术。它操纵信任和情感，诱使用户泄露敏感信息或授予对其账户的访问权限。欺诈者热衷于这种技术，因为它需要极少的技术技能却能带来丰厚的回报。
+相反，恶意软件像数字寄生虫一样潜入设备，悄悄监视、窃取甚至破坏数据。它的有效性在于能够隐藏在看似无害的文件或程序中，让受害者措手不及。
+暴力破解攻击是强大的算法，不断敲击登录凭据，直到堡垒崩溃。
+
+了解这些账户接管欺诈技术对于银行保护客户资产至关重要。同时也有助于维护银行作为安全金融机构的声誉。社会工程学、恶意软件和暴力破解攻击是欺诈者武器库中的强大武器。然而，它们只是犯罪分子使用的最常见的一些ATO欺诈技术。遗憾的是，还有更多，并且毫无疑问，每天都有新的技术被开发出来。
+
+ATO欺诈对企业和个人造成的财务影响可能是毁灭性的。未经授权的交易直接导致的货币损失可能很大，使受害者因后果而震惊。对企业而言，这意味着收入减少、客户关系紧张和未来前景受到威胁。个人必须面对储蓄耗尽、信用评分受损以及重建财务历史的艰难任务。ATO欺诈的影响远远超出了最初的货币损失。它对受影响者的稳定性和福祉投下了长长的阴影。
+关键基础设施、端点保护和零日攻击是当前网络安全领域的重要议题。行业分析师指出，企业主要依赖或完全依赖基于检测的网络安全防御技术。然而，他们的报告也揭示了仅靠基于检测的工具是不够的原因。根据Verizon DBIR的数据，从2019年到2020年，违规事件数量增加了33%，达到5,258起，而2018年至2019年间这一数字增加了96%。Mandiant在2020年的网络事件调查中发现，65%的受攻击组织在第一周内没有发现攻击。尽管机器学习被广泛应用，但它并没有神奇地填补这些昂贵的检测空白。本文接下来将探讨为什么检测未能达到预期效果，并简要介绍企业需要什么以及如何实现。
+
+SolarWinds Orion供应链攻击提供了两个重要教训。一些目标组织的日志数据中包含许多该攻击的指标，但他们的安全运营中心直到行业指南发布后才解读这些数据。这是基于检测的网络安全防御技能差距的一个典型案例。其他组织被发现保留日志数据的时间太短，有些受影响的公司在七天后就删除了数据。
+
+利用现有环境进行攻击时，威胁行为者常常模仿合法工作流程以愚弄检测系统。行业分析师称，这类攻击是最难高置信度检测的。请注意，最后一个限定词。渗透测试人员和实际威胁行为者公开表示，他们故意使攻击树与合法工作流程相似以避免被检测。
+
+威胁行为者通过修改已知恶意文件来愚弄检测系统。文件操作方法多种多样。可以轻易使用“打包器”修改可执行文件而不破坏其功能，然后将其上传到VirusTotal，后者会返回数十个检测供应商的假阴性结果。这个短视频展示了某人如何修改2017年的WannaCry可执行文件，使AV/EDR工具无法识别上传到VirusTotal的文件。
+
+对手仍然可以通过不同的编程语言重新编译源代码来绕过检测。将文件上传到云端进行分析也不够，因为恶意软件有时会暂时休眠或在虚拟环境中表现不同以逃避检测。
+
+机器学习（ML）不是人工智能；它只是统计学。基于ML的检测工具擅长检测以前见过的和非常类似的东西。避开它们只需要一点额外的努力。从根本上说，ML可以被愚弄，因为它不能利用抽象。它统计上将事物与其他事物相关联，而不知道每个事物是什么。因此，向基本攻击树中添加无关紧要的事物会破坏相关性，从而混淆识别。例如，对手通过在阶段之间插入暂停、插入不必要的阶段，以及将合法文件中的无害二进制片段附加到恶意文件上来修改先前被识别的攻击，以愚弄ML。有许多反ML技术。有些甚至使用ML工具来研究如何愚弄基于ML的检测工具。在恶意软件攻击头条新闻的背后，往往是被愚弄的基于ML的检测工具。
+
+禁用的端点代理听不到也报告不了任何信息。Mandiant发现，在2020年的网络事件/违规调查中，有9.8%涉及Mitre ATT@CK的T1562技术，该技术终止或使端点安全工具失效。Ryuk、REvil、SolarWinds等许多攻击都使用了这种技术。离线大约一个小时的代理通常不会被调查，即使被注意到也是如此。攻击者在这段时间内可以相当活跃。这强调了实时阻止攻击的重要性。
+
+当攻击未立即被阻止时，凭据首先被盗，随后其他端点也会被攻陷。2021年Verizon DBIR发现，凭据是最常见的被盗数据类型。所有调查的企业违规事件中有超过40%涉及被盗凭据。第一个端点之后会有许多其他端点。对手手中有一些工具可以自动化查找、捕获和使用特权Windows凭据来攻破域管理员凭据。这些工具可以快速且嘈杂地运行，也可以缓慢且隐蔽地运行。2021年Verizon DBIR还观察到，凭据盗窃不仅针对大型企业。攻击工具使得这样做变得太容易了。有些工具专门设计用来规避EDR检测。警告：试图理解这些规避方法的工作原理可能会导致脑动脉瘤。
+
+分析师称，人为控制的攻击几乎总是能击败检测工具。人为控制的攻击要求对手至少在一个目标主机上运行一个远程控制进程。攻击工具本身是模块化的，由许多不同的攻击组成，可以按需选择。一旦他们发现正在运行的主机保护，就可以调整他们的行动。不同的攻击载荷有的安静，有的嘈杂，对某些防御更有效，对其他防御则不然，并具有多种禁用或规避检测的方法。
+
+一些行业分析师称，此类攻击总是能够成功渗透企业。然而，这种描述是轶事性的，并非统计意义上的推断。这些广泛的断言基于对攻击者迅速获得反馈的理解，即哪些方法有效，哪些无效。趋势表明，威胁行为者越来越多地使用攻击工具，如下面图表所示，因为它们成功地击败了基于检测的防御。Cobalt Strike最初是一个渗透测试工具，是进行人为控制攻击的威胁行为者的首选武器（图表来自Mandiant M-Trends 2021）。

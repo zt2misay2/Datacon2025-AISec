@@ -1,0 +1,4 @@
+但是,如果您不使用OVHcloud网络启动系统直接从磁盘启动,则不会应用缓解措施,您应该考虑依赖操作系统级别的缓解措施。 - 使用UEFI:UEFI固件更新可能在启动时更新CPU微代码。 包括修补微代码的UEFI固件更新可能会在未来几个月内由主板制造商提供。 一旦可用,OVHcloud将在任何新交付的服务器上包含此修补微代码。 客户随后可以通过联系支持请求UEFI固件更新。 作为潜在受影响服务器的管理员,我该怎么办? 首先,使用我们团队开发的工具(仅限Linux)检查您的服务器是否受到此漏洞的影响:
+# wget https://raw. githubusercontent. com/speed47/spectre-meltdown-checker/master/spectre-meltdown-checker. sh
+# sh spectre-meltdown-checker. sh --variant zenbleed --explain
+如果工具显示“NOT VULNERABLE”(未受影响),则您已经安全,无需进一步行动。 如果工具显示“VULNERABLE”(受影响),则应评估您面临威胁的程度。

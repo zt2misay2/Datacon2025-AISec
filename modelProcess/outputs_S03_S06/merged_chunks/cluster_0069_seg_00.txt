@@ -1,0 +1,13 @@
+The top ten mitigation strategies from the U.S. National Security Agency counter various techniques that APT attackers might use. These measures set priorities for organizations to minimize business impact and are built on the NIST Cybersecurity Framework functions, which aim to manage cybersecurity risks and promote a defense-in-depth approach. The strategies are ranked based on the effectiveness of known APT tactics, and additional strategies and best practices are needed to address new tactics as they emerge.
+Cybersecurity protection keywords: Identify, Protect, Detect, Respond, Recover
+Update and upgrade software immediately
+Keywords: Identify, Protect
+Apply all available software updates, automate the process as much as possible, and use update services provided directly by vendors. Automation is crucial because attackers often study patches and exploit methods shortly after a patch is released. These "N-day" exploits can be as destructive as zero-day vulnerabilities. Vendor updates must also be genuine to ensure the integrity of the content. If applications are not patched quickly and thoroughly, attackers can carry out intrusions within the defender's patch cycle.
+Secure privileges and accounts
+Keywords: Identify, Protect
+Assign privileges based on risk exposure and maintain them as required for operational purposes. Use Privileged Access Management (PAM) solutions to automate credential management and fine-grained access control. Another method of managing privileges is through tiered administrative access, where each higher tier provides additional access but to fewer individuals. Create procedures to securely reset credentials such as passwords, tokens, and badges. Controlling privileged accounts and services is essential to prevent attackers from gaining administrative access to high-value assets and moving laterally across the network.
+虽然大多数网络安全漏洞涉及技术问题,但网络安全最终还是一个人的问题。人为因素使企业面临风险,削弱了技术的有效性,但也可以弥补技术无法解决的问题。一些网络问题最好通过人性化解决方案或至少考虑人的状况来处理。我们分享了一些组织可以实施的专业提示,以减轻安全漏洞。这将有助于缓解网络安全计划中许多层级的工作量和压力
+更多专业提示,请下载我们的信息图
+
+寻找暴露的杂项错误
+根据Verizon DBIR 2019报告,“杂项错误”是金融、保险、教育、医疗保健、信息、公共管理、零售和技术服务领域前三大违规模式之一。专业提示:只有冗余的、主动的流程才能解决这些人为造成的症状。您的员工应维护并寻求“错误”Top 10/25/100列表,并与同行合作维护这些列表。优先处理高影响漏洞。寻找方法进行隔离以减少暴露

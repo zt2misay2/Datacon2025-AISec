@@ -1,0 +1,7 @@
+只能应用一些零信任原则来限制被隔离应用程序在多个维度（如文件、注册表、内存、子进程、权限和网络）上的读写操作。微软的应用程序防护是唯一具备此功能的端点保护平台（EPP）产品，并免费提供给所有Windows企业许可证持有者，但使用率不到1%。企业也可以从其他供应商处购买各种实现。
+
+AppGuard提供了企业所需以补充检测防御的零信任能力。AppGuard结合了“隔离”和“预执行应用程序控制”，相当于上表中总结的因AppJacking导致的有害操作的所有“是”条目，详细信息见底部表格。
+
+Secure privileges and accounts
+Keywords: Identify, Protect
+Assign privileges based on risk exposure and maintain them as required for operational purposes. Use Privileged Access Management (PAM) solutions to automate credential management and fine-grained access control. Another method of managing privileges is through tiered administrative access, where each higher tier provides additional access but to fewer individuals. Create procedures to securely reset credentials such as passwords, tokens, and badges. Controlling privileged accounts and services is essential to prevent attackers from gaining administrative access to high-value assets and moving laterally across the network.

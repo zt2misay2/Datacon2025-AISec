@@ -1,0 +1,15 @@
+1.3 Penetration Testing
+- Exploiting strapi CVE-2019-18818 to get a reverse shell
+- Initial information gathering
+- Setting my SSH key in the victim's authorized_keys file
+
+1.4 Privilege Escalation
+- Tunneling the internal site to our system
+- Exploiting Laravel CVE-2021-3129 to get the root flag
+
+0X02 Information Gathering
+First, we use the port probing tool nmap to scan the victim host to see which ports are open, with the command as follows (as shown in Figure 2.1):
+nmap -sV -sC -Pn 10.129.149.92
+
+0X03 Directory Enumeration
+From step 2, we found that the victim host has two open ports: one is port 22 (SSH service), and the other is port 80 (HTTP protocol). Since it is an HTTP service, we know it is a website service. By probing the port with nmap, we found that the website title is horizontall, which can be accessed by our penetration testing machine Kali. We need to add this address to the hosts file for resolution (as shown in Figure 3.1.1).

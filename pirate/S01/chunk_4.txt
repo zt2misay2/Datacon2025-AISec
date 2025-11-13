@@ -1,0 +1,26 @@
+Founded in 2016 and headquartered in Washington, WireWheel is dedicated to simplifying the construction of data privacy protection compliance capabilities, helping companies deal with complex and stringent laws and regulations. In October 2018, the company received a $10 million Series A financing round led by PSP Growth.  
+According to the Breach Level Index report published by digital security company Gemalto in October 2018, there were 945 data breaches in the first half of 2018, resulting in the exposure of 4.5 billion records. To strengthen consumer privacy rights and data security, the European Union's General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA) have been enacted and passed. Many companies, lacking awareness and capability for user privacy and data protection, urgently need to respond to various compliance requirements or face severe penalties. The data privacy security company BigID won the RSAC 2018 Innovation Sandbox, and this year’s Innovation Sandbox also focuses on innovation in the field of data privacy, indicating a strong demand for innovation in data privacy protection in the security sector.  
+Privacy protection and data security have become important components of corporate security capability building. However, enhancing data privacy protection in a complex IT system environment poses a significant challenge to traditional data loss prevention technologies and products, adding a heavy burden to corporate data management. Large enterprises, with their complex internal network environments and data storage architectures, require technical support across multiple stages such as data discovery, management, and classification for effective data privacy protection. Data collaboration and sharing among multiple departments necessitate the correlation and aggregation analysis of data to more reasonably identify potential privacy leak risks.  
+云安全不仅是公司和公共部门客户的重要话题，也是政治家们关注的重点。由于目前还没有欧盟范围内的统一安全标准规定，各成员国依赖于自己的法律和法规。这意味着公司的合规性也必须适应现有的差异。  
+在德国，联邦信息安全办公室（BSI）的标准目录C5（云计算合规标准目录）规定了安全云计算的最低要求，并同时针对云提供商及其客户。少数几家公司已经获得了C5认证——其中就包括这一领域的领先提供商OVHcloud。该认证不仅证明了相应的提供商处于良好的状态，还是一份指南，为企业和组织在选择合适的云提供商时提供参考——这一点尤其重要，尤其是在公共招标中。BSI的C5规则集主要由联邦机构开发的一系列安全控制机制组成。该要求目录首次发布于2016年，并于2019年进行了修订，现已获得高度认可——迄今为止已颁发了十多个证明，从而确保可靠地符合安全相关的标准。C5是作为许多旨在确保云安全的不同规则集的替代或继任者而开发和实施的。这些规则集包括ISO 27001、27002和27017标准以及云安全联盟（CSA）的云控制矩阵（CCM）。借助C5，五年来一直有一个统一的相关安全要求汇编——而且其重要性日益增加。鉴于2020年绝大多数公司都将使用云（超过80%），并且其中一半每年将在相应服务上平均花费超过一百万欧元，最大的安全性和数据保护问题是最重要的。C5给出了答案。拥有C5认证的企业可以自信地展示自己是一个安全且数据谨慎的公司。C5为客户在选择云提供商时提供了自己的合格风险管理选项。  
+然而，对于国际活跃的公司来说，各国不同的规定可能是个问题。在德国的C5认证很难作为国外客户的选型论据。那么在意大利或法国呢？甚至在非欧盟国家如英国？在法国，适用的是国家信息系统安全局（ANSSI）的SecNumCloud规定。遵守这些规则的人展示了他们在IaaS（基础设施即服务）、PaaS（平台即服务）和SaaS（软件即服务）方面的合规性。SecNumCloud认证代表了通过韧性和抵御复杂网络攻击的能力实现的安全性，以及通过长期数据保护合规性实现的信任。该规定针对公共公司、关键供应商和数字服务提供商——当然还有相应的软件/SaaS提供商和系统集成商。  
+在意大利，数字意大利机构（AGID）即国家IT监管机构的规定主要集中在两种类型的要求上：公司特定的和其他指定的。公司或组织特定的条件包括在关键时刻自信应对的能力、高效的质量管理、全天候客户服务以及对变更、配置和事件管理等定义流程的调整——还包括合同签订时的最大透明度。意大利规定的其他要求包括安全和数据保护规则、性能和可扩展性的条件、整个生命周期的服务质量保证以及互操作性和可移植性。  
+最后，在英国，政府倡议G-Cloud中，“G”代表“Government”（政府）。这主要针对当局和政府机构。它适用于四个核心领域：“传输中的数据保护”、“资产保护与韧性”、“消费者之间的隔离”和“治理框架”。通过这些核心领域，该规则集涵盖了公共机构采用云解决方案时的基本安全方面——目的是在全国范围内推广并使云计算成为当局的标准。这些规定在2014年进行了修订和调整——简化为三个类别而不是之前的六个类别：“官方”、“秘密”和“绝密”。  
+总之，每一套规则都有其自身的特征、重点和详细解决方案，因此在泛欧视角下，更像是一个拼凑而成的被子，而不是跨境的最低标准。对于提供商而言，这意味着在一个国家决定性的因素并不一定在另一个国家也是如此——因此，在许多情况下，为了在不同市场获得相关认证，需要复杂的适应措施。当然，如果一家公司对其云产品本身有很高的要求，这是一个很大的优势。只要没有一个国际活跃的客户可以依赖的欧洲标准，在选择提供商时，他们就必须确保所使用的云解决方案在所有相关市场都具有认证。只有这样，才能确保合规性和安全性在任何地方都得到保障。  
+根据身份盗窃资源中心（ITRC）上个月发布的《2021年回顾报告》，我们推断出几乎一半的2021年数据泄露是由于端点保护失败造成的。这个推断是合理的，但需要承认这个数字最多只是近似值。尽管如此，它对于设定2022年的网络安全堆栈和安全运营优先级仍然有用。需要在端点提供更多保护。  
+为什么这个端点保护失败的数字很重要  
+没有人的预算足够支付所有可能的风险缓解措施。决策者必须选择哪些措施可能以最低的成本产生最大的影响。他们已经为多层次的网络安全堆栈提供了资金，以实现纵深防御。人员成本通常远高于工具成本。所有组织至少在每个端点上都有一个基于软件的防御（例如，传统的防病毒软件、端点保护平台）。其他层次部署在端点之前（即边界）、周围（例如，入侵检测、实体用户行为分析等）和之后（SIEM、XDR等）。来自端点防御的警报也应被视为涉及端点防御之后的资源，因为直到分析师调查后才会阻止或终止任何事情。而且，不要忘记补救和其他事件后的成本。  
+完美的预防性端点保护将大大减少“周围”和“之后”层的人员工作量。相反，更多的端点保护失败会增加“周围”和“之后”的成本。这也增加了风险，因为当人员追查大量相对低影响的事件时，他们无法处理高影响的事件。警报疲劳也会降低人员效率，从而增加风险。  
+决策者总是在众多潜在的网络安全投资中挣扎选择。声称2021年46%的数据泄露是由于端点保护失败造成的，这意味着有了这个数字比没有这个数字更容易选择改进措施。这样做可以改善整体风险缓解并降低IT/安全运营成本。  
+我们如何得出这个数字以及为什么它可能低估了原因  
+该报告将“网络攻击”数据泄露的原因分类为：“钓鱼/短信钓鱼/BEC”、“勒索软件”、“恶意软件”、“非安全云环境”、“凭证填充”、“未修补的软件漏洞”、“零日攻击”、“其他-未指定”，以及“NA”（未定义）。我们排除了未归因的泄露事件，然后将“勒索软件”（33%）、“恶意软件”（13%）、“未修补的软件漏洞”（0.4%）和“零日攻击”（0.4%）的个别原因合并到我们得出的“端点保护失败”数字（46%）。这些数字仅适用于那些归因了根本原因的数据泄露事件。  
+钓鱼攻击可能涉及社会工程、恶意软件或两者兼有。我们无法说有多少比例的钓鱼攻击涉及恶意软件。多年来，Verizon数据泄露调查报告背后的专家告诉我们，事件/泄露提交往往存在问题。一些钓鱼攻击可能涉及恶意软件，但未被分类为恶意软件。同样，许多甚至大多数组织缺乏快速识别由于“未修补的软件漏洞”或“零日攻击”导致的事件/泄露所需的取证能力。因此，由于端点保护失败而导致的数据泄露很可能被低估了。  
+“零日攻击”的数字并不令人惊讶。它们一直占很小的比例，因为还有许多其他方式可以破坏企业。然而，同比增幅达到了300%。不过，2021年确实比2020年报告了更多的零日漏洞。  
+2021年勒索软件和恶意软件导致的数据泄露增加  
+报告显示，2021年勒索软件导致的数据泄露比2020年增加了122%。同样，恶意软件导致的数据泄露增加了34%。  
+2021年数据泄露比2020年增加了84%  
+ITRC的数据表明，2021年和2020年分别有1,613起和878起由网络攻击引起的数据泄露。这相当于增长了83.7%。许多人认为这是由于更多的人在家工作，这意味着对端点保护的依赖更大。  
+三分之一的泄露事件未归因于根本原因  
+这对上述所有数字意味着什么？我们只能猜测。然而，这确实说明了很多潜在信息有助于每个人做出更好的决策。你可能已经注意到，公开的数据泄露报告很少具体说明哪些网络安全防御失败及其方式。  
+恶意软件“检测差距”使每个人都处于风险之中  
+我们认为，企业防御过于依赖检测技术，而这些技术未能识别恶意文件和行为的几乎无限种类。更糟糕的是，太多组织依赖低端的基于检测的防御。有些防御效果远好于其他。但即使是最好的防御也会失败。而且，最好的防御越来越多地在检测和应对复杂的恶意软件攻击时，是在一个或多个端点和凭证被攻破后数小时到数月才进行。这种情况发生得越晚，清理成本和财务影响就越大。

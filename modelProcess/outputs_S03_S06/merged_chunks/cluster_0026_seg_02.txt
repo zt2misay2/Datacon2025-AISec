@@ -1,0 +1,2 @@
+sh --variant zenbleed --explain
+如果工具显示“NOT VULNERABLE”(未受影响),则您已经安全,无需进一步行动。 如果工具显示“VULNERABLE”(受影响),则应评估您面临威胁的程度。

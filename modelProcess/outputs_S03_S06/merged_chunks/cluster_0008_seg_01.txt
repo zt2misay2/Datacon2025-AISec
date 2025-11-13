@@ -1,0 +1,24 @@
+然而,有时这个问题的答案并不那么明确。很大程度上取决于被勒索的信息对组织的价值以及组织能承受多长时间的停机时间。即使有一个高效且安全的备份策略(并定期测试!),仍有可能出现某些情况下组织无法承受数据丢失或服务器和工作站停机的情况,即使只是短暂的时间。
+
+备份通常是按固定计划进行的。对于拥有大型网站作为主要业务的公司来说,不能承受例如一天甚至一小时内完成的交易丢失,因为这可能意味着损失数百万美元。此外,如果一个组织的业务依赖于专有信息并且这些信息被勒索,该组织似乎别无选择只能支付。
+
+然而,支付赎金并不总能保证被勒索的文件会被解密。许多勒索软件攻击者会在收到相关比特币付款后提供解密密钥,而其他人则不会。有时由于错误或其他技术问题,提供的解密密钥无法成功解密所有被勒索的文件。即使解密过程有效,也常常非常缓慢且不可靠。
+
+无论攻击者及其解密工具是否释放您的文件,这绝对是你组织不想陷入的情况。
+
+组织可以采取两种不同的方法来防止或缓解这种威胁:被动方法和主动方法,这两种方法并不相互排斥。
+
+被动方法
+1. 如果一个或多个客户端被攻破,立即将其从网络中断开。
+2. 如果您的公司使用云存储,请断开受感染客户端的连接,以防止它们同步到云端。同样的原则适用于文件服务器/共享。
+3. 从已知干净的备份中恢复受损系统和数据。需要实施并测试全面的备份和灾难恢复策略。理想情况下,至少一个备份副本应存储在安全的离线/异地位置,因为一些勒索软件变种会攻击并破坏其在企业网络中找到的任何备份。人为因素在信息安全中至关重要,粗心的一次点击就可能在几秒钟内损坏组织的网络。主动、正式且有效的备份策略对于缓解勒索软件威胁至关重要。
+4. 准备用已知干净的黄金镜像重新安装受感染的机器。
+5. 在确保受感染机器运行干净且可信的配置后,再将其重新连接到网络。监控一切以确保成功清除。
+According to the National Information Security Vulnerability Database (CNNVD) statistics, from May 8-14, 2023, CNNVD received reports of 311 vulnerabilities, including 175 information technology product vulnerabilities and 136 network information system vulnerabilities. Additionally, CNNVD collected 102 vulnerability notifications.
+The key vulnerabilities to focus on this week include: CVE-2023-31039 Apache bRPC Code Execution Vulnerability, CVE-2023-20877 VMware Aria Operations Privilege Escalation Vulnerability, the May 2023 Patch Tuesday with multiple Microsoft vulnerabilities, and CVE-2023-29032 Apache OpenMeetings Authentication Bypass Vulnerability. These vulnerabilities have a broad impact, and Hua Yun An recommends that relevant users conduct asset self-inspections and take preventive measures.
+**01 CVE-2023-31039 Apache bRPC Code Execution Vulnerability**
+Threat Level: High
+Vulnerability Description:
+On May 8, 2023, the Hua Yun An Si Jing security team monitored that Apache officially released a security update, disclosing a vulnerability in versions of Apache bRPC prior to 1.5.0. Apache bRPC is an open-source, industrial-grade C++ RPC framework, commonly used in high-performance systems such as search, storage, machine learning, advertising, and recommendations. An unauthenticated attacker could exploit this vulnerability to modify the ServerOptions pid_file parameter when the bRPC server starts, leading to arbitrary code execution with bRPC process permissions.
+Source:
+https://lists.apache.org/thread/jqpttrqbc38yhckgp67xk399hqxnz7jn

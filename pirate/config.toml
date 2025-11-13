@@ -1,0 +1,27 @@
+# 对话配置（可选，不填则使用默认值）
+[chat]
+response_mode = "blocking"    # 响应模式：streaming（流式，推荐）/ blocking（阻塞）
+auto_generate_name = false      # 是否自动生成会话标题：true/false
+# workflow_id = "your-workflow-uuid"  # 可选，指定工作流版本（需替换为实际UUID）
+# trace_id = "your-trace-id"          # 可选，链路追踪ID（业务系统集成用）
+
+# 攻击侧模型配置
+[silicon]
+# API密钥
+silicon_api_key = "sk-ayzuywteajduprnlfdhsmjmealxtdnnvbddyetnkrvomskcj"
+# 对话API端点
+llm_url = "https://api.siliconflow.cn/v1/chat/completions"
+# 嵌入API端点  
+embed_url = "https://api.siliconflow.cn/v1/embeddings"
+# 默认对话模型
+model = "deepseek-ai/DeepSeek-V3.2-Exp"
+# 默认嵌入模型
+embed_model = "Qwen/Qwen3-Embedding-8B"
+
+# 文件配置（可选，仅当模型支持Vision/Audio时启用）
+# [file]
+# enable = false  # 是否启用文件上传：true/false
+# file_list = [
+#   { type = "image", transfer_method = "remote_url", url = "https://example.com/your-image.png" }
+# ]
+

@@ -1,0 +1,25 @@
+ca/incident-de-confidentialite-impliquant-des-renseignements-personnels/aviser-commission-et-personnes/
+CERT:
+法国:
+https://www. cert. ssi. gouv. fr/les-bons-reflexes-en-cas-dintrusion-sur-un-systeme-dinformation/
+意大利:
+https://cert-agid. gov. it/contatti/
+比利时:
+https://www. cert. be/fr/signaler-un-incident
+西班牙:
+https://www. ccn-cert. cni. es/gestion-de-incidentes/notificacion-de-incidentes. html
+波兰:
+https://incydent. cert. pl/#! /lang=en
+英国:
+https://report. ncsc. gov. uk/
+加拿大:
+https://www. cyber. gc. ca/en/incident-management
+德国:
+https://www. bsi. bund. de/DE/Themen/Unternehmen-und-Organisationen/Cyber-Sicherheitslage/Reaktion/CERT-Bund/Kontakt/kontakt_node. html
+葡萄牙:
+https://www. cncs. gov. pt/pt/certpt/
+附加参考资料:
+https://www. bleepingcomputer. com/news/security/
+https://www. bleepingcomputer. com/forums/t/782193/esxi-ransomware-help-and-support-topic-esxiargs-args-extension/massive-esxiargs-ransomware-attack-targets-vmware-esxi-servers-worldwide/
+https://blogs. vmware. com/security/2023/02/83330. html
+https://members. loria. fr/MMinier/static/papers/sosemanuk_8. pdf

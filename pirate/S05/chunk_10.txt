@@ -1,0 +1,36 @@
+Your organization uses artificial intelligence models extracted from public repositories? Are you sure it is safe? If you are unsure, you may need to check a new free open-source tool that aims to mark supply chain vulnerabilities and risks in publicly available AI models. This tool, named AI Risk Database, was created by AI vendor Robust Intelligence in March of this year and further refined with MITRE. The latest version was released this week on GitHub. Indiana University also participated in this collaboration. "This collaboration and the release of the AI Risk Database can directly allow more organizations to see the risks and vulnerabilities they face when deploying specific types of AI systems," said Douglas Robbins, vice president of Engineering and Prototyping at MITRE. Representatives from the three organizations gave two presentations at Black Hat USA 2023 in Las Vegas. For more details, please check the announcements from MITRE and Robust Intelligence.
+Weak passwords or no passwords, as well as leaked credentials, account for about 62% of the cloud security vulnerabilities observed by Google Cloud event response team in the first quarter of 2023. Enterprises affected by this "ongoing challenge" can address this issue by strengthening their identity management tools and processes. Google stated this in its "2023 August Threat Horizon Report," a 31-page report. Other findings include: cybercriminals are allowing seemingly legitimate Android applications to pass Google Play Store reviews, then distributing unauthorized updates through hidden channels to add malicious features. Enterprises can mitigate such threats by adopting enterprise mobile management systems to create pre-approved application lists for users. According to an analysis of anonymous alert statistics from Google Chronicle Security Operations, the largest risk behavior leading to compromise is the cross-project abuse of Google Cloud Platform's access token generation permissions. For all details, read the complete report.
+The U.S. Cybersecurity and Infrastructure Security Agency (CISA) hopes its newly released Cybersecurity Strategic Plan will make cybersecurity vulnerabilities rare, organizations able to defend against cyber attacks, and technology products inherently secure. These goals have not yet been achieved, but CISA hopes to reach them within the next three years. "We must clearly recognize the future we are pursuing, a future in which disruptive cyber intrusions are a shocking anomaly, organizations are secure and resilient, and technology products are inherently secure," the document states. The plan establishes three main goals: addressing direct threats, fortifying positions, and large-scale promoting security. For all details, check the CISA announcement and complete plan document.
+KubeClarity is a specialized tool for detecting and managing software bill of materials (SBOM) and vulnerabilities in container images and file systems. It enables researchers to scan runtime Kubernetes (K8s) clusters and CI/CD pipelines, thereby enhancing the security of the software supply chain.
+The key features of KubeClarity include:
+1. A comprehensive dashboard that categorizes vulnerabilities by severity, displays detailed vulnerability information, and shows new trends.
+2. Application detection capabilities that support automatic detection of applications in the K8s runtime environment, as well as the creation, editing, and deletion of applications, along with the display of application details and associated vulnerabilities.
+3. The ability to view application resources such as packages, images, directories, files, and vulnerabilities.
+4. K8s runtime scanning, which can be performed on-demand or scheduled, and includes automatic detection of target namespaces and CIS Docker benchmarks.
+5. Command Line Interface (CLI) support for CI/CD, allowing the generation of SBOM using multiple integrated content analyzers like Syft and cyclonedx-gomod, and the scanning of SBOM, images, or directory vulnerabilities using multiple integrated scanners. Results can be exported to the KubeClarity backend.
+6. API support, providing an API service for integration and automation.
+0X01 Introduction
+#Horizontall# is a relatively "simple" CTF Linux box. This CTF environment covers exploiting the Strapi RCE vulnerability and using an internal application (Laravel) to tunnel to the local machine, and running a PoC on Laravel v7.4.18 to escalate privileges and obtain root user rights.
+
+1.1 Information Gathering
+- nmap port scanning tool
+
+1.2 Directory Enumeration
+- Using the wfuzz directory enumeration tool
+- Strapi password reset vulnerability
+
+1.3 Penetration Testing
+- Exploiting strapi CVE-2019-18818 to get a reverse shell
+- Initial information gathering
+- Setting my SSH key in the victim's authorized_keys file
+
+1.4 Privilege Escalation
+- Tunneling the internal site to our system
+- Exploiting Laravel CVE-2021-3129 to get the root flag
+
+0X02 Information Gathering
+First, we use the port probing tool nmap to scan the victim host to see which ports are open, with the command as follows (as shown in Figure 2.1):
+nmap -sV -sC -Pn 10.129.149.92
+
+0X03 Directory Enumeration
+From step 2, we found that the victim host has two open ports: one is port 22 (SSH service), and the other is port 80 (HTTP protocol). Since it is an HTTP service, we know it is a website service. By probing the port with nmap, we found that the website title is horizontall, which can be accessed by our penetration testing machine Kali. We need to add this address to the hosts file for resolution (as shown in Figure 3.1.1).

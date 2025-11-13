@@ -1,0 +1,133 @@
+在3月7日，VEEAM发布了一篇知识库文章，描述了该公司提供的几款软件中的一个新的CVE漏洞。此漏洞可能导致凭据泄露和远程代码执行。VEEAM是一家专注于虚拟化基础设施和基于云的应用程序的弹性的软件公司。其主要软件VEEAM Backup & Replication为虚拟机、物理服务器、云基础设施或应用程序提供备份解决方案，并支持多种类型的备份存储库来存储备份（如CIFS、S3桶等）。  
+
+OVHcloud中提供了多种使用VEEAM软件的方式：  
+第一种是Hosted Private Cloud中的Veeam Backup Managed选项，由OVHcloud完全管理并已应用了与此漏洞相关的缓解措施。  
+第二种是在备份服务器上安装并使用由OVHcloud提供的VEEAM Enterprise选项来获取VEEAM许可证。在这种配置下，按使用量计费，并且您可以使用VEEAM Backup & Replication的所有功能并完全管理基础设施。  
+最后一种是在备份服务器上自带许可证进行安装。这种情况下，您将完全管理备份基础设施。  
+在后两种选项中，您可以在VEEAM Backup & Replication软件中添加托管私有云、专用服务器和其他服务。  
+
+CVE-2023-27532影响到监听VEEAM服务器TCP 9401端口的Veeam.Backup.Service.exe。它允许未经身份验证的用户请求存储在VEEAM数据库中的凭据，还可以在备份服务器上远程执行命令。攻击者可以使用这些凭据访问受备份软件保护的所有服务器。  
+
+尽管利用此漏洞并不简单，但至少有一个勒索软件组织正在积极利用它，并且许多利用代码已公开。因此，未来几周内自动化攻击的数量可能会增加。  
+在观察到的操作方法中，攻击者利用该CVE漏洞获取备份解决方案覆盖的基础设施的凭据（例如：vSphere凭据等），以便从库存中删除所有虚拟机并最终加密所有备份。然后，他们将要求赎金以获取解密密钥。目前，这种利用仅发生在直接暴露在互联网上的运行Windows操作系统的备份服务器或备份代理上。  
+
+所有早于12.0.0.1420 P20230223或11.0.1.1261 P20230227版本的VEEAM Backup & Replication都存在漏洞。如果不受信任的IP可以访问9401端口，则该服务存在漏洞。  
+
+为了保护您的基础设施，我们强烈建议您更新备份软件。您可以在官方文档中找到修补后的二进制文件。  
+在等待更新期间，为了防止未来的漏洞暴露，我们建议应用以下配置：  
+首先，避免将备份基础设施直接暴露在不安全的网络（如互联网）上。  
+当您在服务器上安装VEEAM时，它会配置防火墙以允许任何连接到VEEAM端口，而不限制远程地址。因此，所有端口都可以从任何地方直接访问。  
+我们建议应用防火墙规则，将端口限制为最少的主机。  
+为此，请确保Windows Defender防火墙设置为阻止所有不符合规则的入站连接。  
+然后，确保所有使用的端口仅能从您信任的服务器访问。对于最佳配置，请参阅官方文档。  
+您应该看到防火墙规则现在已限制为您配置的IP。  
+最后，如果您不使用挂载服务器，我们建议完全阻止9401端口。  
+由于该利用使用了合法访问，因此无法在虚拟化基础设施或备份存储库级别进行缓解。因此，必须确保使用这些基础设施的组件的安全性。  
+
+如果您认为自己已被攻破，我们强烈建议您尽快联系OVHcloud支持，以评估可能恢复数据的解决方案。  
+目前有一波攻击正在针对ESXi服务器。虽然没有OVHcloud管理的服务受到此次攻击的影响，但许多客户在自己的服务器上使用这个操作系统。因此，我们提供这篇帖子作为参考，以帮助他们进行修复。这些攻击在全球范围内被检测到。根据生态系统中的专家以及权威机构的说法，恶意软件可能利用了CVE-2021-21974作为入侵载体。调查仍在进行中，以确认这些假设。我们的技术团队正在努力识别攻击的详细特征，并与来自其他CERT和安全团队的同行协调。  
+
+更新 07/02/2023  
+我们继续进行调查并为客户提供支持。我们优先考虑以下工作：识别我们网络中受影响的客户，以提供最准确和适当的信息，帮助他们从攻击中恢复；识别潜在的脆弱客户，确保他们在类似攻击再次发生时尽快采取适当的措施来减轻风险。一些安全研究人员可能已经发现了Babuk勒索软件源代码（于2021年9月泄露）之间的联系。加密算法（Sosemanuk）在这两种情况下都被使用，但代码结构似乎略有不同。  
+
+除了之前描述的恢复程序外，我们注意到加密过程只影响文件中的一小部分数据。根据您的虚拟机操作系统和文件系统类型，您可能能够使用数据恢复工具至少部分地恢复数据。请注意，这些工具可能会对文件产生不可逆的影响，因此我们建议在尝试任何恢复操作之前将虚拟机文件复制到另一个位置以保护数据。我们列出了可以协助您恢复数据和重建系统的公司名单。该名单将在OVHcloud支持页面上提供。  
+
+我们也提醒作为数据控制者的客户，他们在发生安全事件时可能有法律要求通知当局。确保您在规定的时间内向适当的当局申报了事件。您可以在下面找到主要受影响国家的数据保护当局关于数据泄露违规的程序以及CERT网站。请与您的法律部门或法律顾问确认，以确保根据您的身份通知正确的组织。对于个人数据控制者：  
+
+法国：  
+https://www.cnil.fr/fr/notifier-une-violation-de-donnees-personnelles  
+
+意大利：  
+https://servizi.gpdp.it/databreach/s/  
+
+比利时：  
+https://www.autoriteprotectiondonnees.be/professionnel/actions/fuites-de-donnees-personnelles  
+
+西班牙：  
+https://www.aepd.es/es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion  
+
+波兰：  
+https://uodo.gov.pl/pl/501/2278  
+
+英国：  
+https://ico.org.uk/for-organisations/report-a-breach/  
+
+德国：  
+https://formulare.bfdi.bund.de/lip/form/display.do?%24context=E72B6A6366642AE42118  
+
+葡萄牙：  
+https://www.cnpd.pt/databreach/  
+
+魁北克：  
+https://www.cai.gouv.qc.ca/incident-de-confidentialite-impliquant-des-renseignements-personnels/aviser-commission-et-personnes/  
+
+CERT：  
+
+法国：  
+https://www.cert.ssi.gouv.fr/les-bons-reflexes-en-cas-dintrusion-sur-un-systeme-dinformation/  
+
+意大利：  
+https://cert-agid.gov.it/contatti/  
+
+比利时：  
+https://www.cert.be/fr/signaler-un-incident  
+
+西班牙：  
+https://www.ccn-cert.cni.es/gestion-de-incidentes/notificacion-de-incidentes.html  
+
+波兰：  
+https://incydent.cert.pl/#!/lang=en  
+
+英国：  
+https://report.ncsc.gov.uk/  
+
+加拿大：  
+https://www.cyber.gc.ca/en/incident-management  
+
+德国：  
+https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Cyber-Sicherheitslage/Reaktion/CERT-Bund/Kontakt/kontakt_node.html  
+
+葡萄牙：  
+https://www.cncs.gov.pt/pt/certpt/  
+
+附加参考资料：  
+https://www.bleepingcomputer.com/news/security/  
+https://www.bleepingcomputer.com/forums/t/782193/esxi-ransomware-help-and-support-topic-esxiargs-args-extension/massive-esxiargs-ransomware-attack-targets-vmware-esxi-servers-worldwide/  
+https://blogs.vmware.com/security/2023/02/83330.html  
+https://members.loria.fr/MMinier/static/papers/sosemanuk_8.pdf  
+2023年7月24日，AMD发布了一份安全公告，披露了其Zen2计算机处理器微架构中的一个漏洞。该漏洞被AMD命名为“跨进程信息泄露”，也被称为“Zenbleed”。该漏洞被标记为CVE-2023-20593，并被AMD评为中等严重程度。此问题允许攻击者在特定情况下访问CPU处理的敏感信息。所有运行在基于AMD Zen2处理器上的软件，包括虚拟机、沙箱、容器和进程，都会受到影响。利用此漏洞的软件可能已经存在，预计基于此漏洞的攻击很快就会发生。  
+
+所有AMD Zen2 CPU，包括EPYC Rome处理器，都存在此漏洞，具体包括：  
+- AMD Ryzen 3000系列处理器  
+- AMD Ryzen PRO 3000系列处理器  
+- AMD Ryzen Threadripper 3000系列处理器  
+- 带有Radeon显卡的AMD Ryzen 4000系列处理器  
+- 带有Radeon显卡的AMD Ryzen PRO 4000系列处理器  
+- 带有Radeon显卡的AMD Ryzen 5000系列处理器  
+- 带有Radeon显卡的AMD Ryzen 7020系列处理器  
+- 第二代AMD EPYC “Rome”处理器  
+
+对OVHcloud产品的影响  
+针对这一事件，我们立即审查了安全公告和技术信息，并确定了以下对我们产品可能产生的影响。  
+- 公共云：所有产品未受影响  
+- 托管私有云：所有产品未受影响  
+- 网站托管与域名：所有产品未受影响  
+- 裸机云：ADVANCE-1, Advance STOR-1, Advance STOR-2, Game-1, Game-2, HGR-SDS-2, HGR-HCI-4, HGR-HCI-5, HGR-HCI-6, Infra-2, Rise-GAME-1, Rise-GAME-2, Scale-1, Scale-2, Scale-3（仅限由AMD Zen2驱动的服务器）可能受影响  
+- 其他商用系列专用服务器：未受影响  
+
+如何缓解漏洞：  
+- 客户自行缓解：通过固件包更新在启动时加载修补的微代码。此解决方案将通过操作系统更新（例如linux-firmware包）触发处理器微代码的更新。您可以在您的操作系统编辑器或社区分发更新包后进行操作。此方法取决于您的发行版或操作系统编辑器，并且只有在AMD提供了适当的微代码时才有效。目前，只有“Zen2 Rome”和“Zen2 Castle Peak”可以通过此方法覆盖。  
+- 使用更新的内核缓解：当无法通过固件更新包获得微代码更新时，您可以更新内核版本，通过配置所谓的“chicken bit”来禁用故障处理器功能以实现缓解。这可能会影响系统的性能。此解决方案将在操作系统编辑器回传新版本的Linux内核时包含。我们建议客户优先采用此缓解策略，因为这是最有效的，不依赖于硬件供应商是否提供更新的微代码。  
+- 作为替代方案，您可以手动设置chicken bit而不依赖内核更新。然而，我们不推荐这种可能对系统有风险的解决方案。  
+
+OVHcloud发起的缓解措施  
+OVHcloud团队正在努力实施透明的解决方案，确保客户的修补微代码以透明的方式更新。这些解决方案将逐步部署到我们的服务器上。目前正在评估两个主要选项。  
+- 使用OVHcloud iPXE：当客户使用标准的OVHcloud网络启动（最常见的配置）时，引导加载程序可能会加载微代码更新。一旦可用，通过OVHcloud客户界面重启服务器将导致在从磁盘启动之前加载更新的微代码，从而缓解漏洞。但是，如果您不使用OVHcloud网络启动系统直接从磁盘启动，则不会应用缓解措施，您应该考虑依赖操作系统级别的缓解措施。  
+- 使用UEFI：UEFI固件更新可能在启动时更新CPU微代码。包括修补微代码的UEFI固件更新可能会在未来几个月内由主板制造商提供。一旦可用，OVHcloud将在任何新交付的服务器上包含此修补微代码。客户随后可以通过联系支持请求UEFI固件更新。  
+
+作为潜在受影响服务器的管理员，我该怎么办？  
+首先，使用我们团队开发的工具（仅限Linux）检查您的服务器是否受到此漏洞的影响：  
+# wget https://raw.githubusercontent.com/speed47/spectre-meltdown-checker/master/spectre-meltdown-checker.sh  
+# sh spectre-meltdown-checker.sh --variant zenbleed --explain  
+如果工具显示“NOT VULNERABLE”（未受影响），则您已经安全，无需进一步行动。  
+如果工具显示“VULNERABLE”（受影响），则应评估您面临威胁的程度。

@@ -1,0 +1,1 @@
+`UEBA, user entity behavior analysis, is used to detect anomalies by analyzing behavior patterns, while cryptographic technology ensures data confidentiality and integrity through encryption methods.`

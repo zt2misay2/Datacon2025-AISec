@@ -1,0 +1,1 @@
+KubeClarity is a specialized tool for detecting and managing software bill of materials (SBOM) and vulnerabilities in container images and file systems. It enables researchers to scan runtime Kubernetes (K8s) clusters and CI/CD pipelines, thereby enhancing the security of the software supply chain.

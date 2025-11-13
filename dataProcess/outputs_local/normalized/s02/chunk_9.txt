@@ -1,0 +1,45 @@
+A Practical Scenario
+1. Background
+We serve as a security service provider for the information center of a government unit, which comprises over ten business units, each with hundreds of information systems. All these system servers are located in a central server room, and the information center is responsible for their security supervision. While the information center has management rights over the network in the server room, the individual business units hold the management rights for their respective servers. Currently, due to various practical reasons, the business units lack basic management, let alone security management, for their information systems. Additionally, the information center lacks a mechanism for security monitoring, making it unclear which information systems and open services exist, which systems have security risks, and which new security vulnerabilities will affect them. To address this situation, we designed a comprehensive solution for the client, establishing a fundamental process from asset discovery to risk monitoring. This means conducting risk monitoring systematically based on real-time and reliable asset data. By reliable data, we mean, for example, port data: there should be no significant omissions, finding 99 out of 100 open ports; the data should be highly effective, with 99 out of 100 open ports being valid; the data should be highly accurate, with 99 out of 100 open ports correctly identified; and the data should be stable, always providing reliable results whenever accessed.
+IT/安全运营通常在维护窗口期间对端点进行重大更改,此时可能会禁用保护以避免干扰。这允许使用任何操作系统实用工具来执行任务。大型组织由于有足够的冗余可以容纳服务器暂时下线,而较小的组织则可能无法承受这种停机时间。对于笔记本电脑和台式机而言,这一过程带来了额外的挑战。一些减少攻击面的工具可以在不完全禁用所有控制的情况下使用操作系统实用工具。有些工具甚至可以在需要时临时禁用所有保护控制(例如通过离散触发器)。因此,在选择此类工具时,确保您的IT/安全运营人员考虑其具体用例是非常重要的。
+
+LOLbin攻击面减少选项有各自的优缺点。使用操作系统设置提供了许多有价值的可能,并且比其他选项提供更细粒度的控制,但对手也可能更改或删除这些设置。应用程序控制工具可以开/关禁止,但一旦LOLbins运行后就很难再对其进行控制。此外,这类工具的部署和维护相对繁琐,导致企业采用率较低。隔离/遏制工具很少能够限制LOLbin的操作,而且并非所有的工具都能在没有维护窗口的情况下适应合法操作(如应用程序更新、补丁等)。EDR/EPP工具可以终止LOLbins,前提是识别出恶意行为,但是某些攻击会试图禁用EDR。如果不启用检测功能,则往往也需要维护窗口来进行系统更改。对LOLbin攻击的手动修复通常是必需的。
+
+AppGuard能够在减少LOLbin风险的同时给予IT/安全运营灵活性。它可以选择性地并且有条件地禁止操作系统实用工具,使得用户和IT/安全运营可以根据需要使用它们,同时阻止对手利用这些工具。作为一种“中间”方案,AppGuard还可以对脚本引擎或其他操作系统实用工具实施遏制策略,从而限制它们的功能而不完全禁止。如果IT/安全运营正在使用操作系统设置来限制某些操作,AppGuard还能对其应用隔离策略,防止对手篡改设置。当现有策略不足以满足特定需求时,AppGuard还提供了让IT/安全运营及高级用户临时禁用保护以便进行系统更改的方法。
+
+AppGuard是EDR/EPP工具的理想补充。后者擅长于检测已知威胁,而AppGuard则专注于阻止那些尚未被网络安全社区发现的新型攻击。通过启动、遏制和隔离控制,AppGuard能够在无需识别恶意软件的情况下阻止其活动。形象地说,如果将恶意软件比喻为一辆必须从A点到B点行驶的汽车,那么AppGuard就是沿途设置的混凝土障碍物和大门,阻止该车到达目的地。相比之下,EPP/EDR工具只有在成功识别出攻击时才能发挥作用,因此AppGuard是一个非常有效的补充手段。
+
+更多关于AppGuard如何减轻来自操作系统实用工具的风险并赋予IT/安全运营灵活性的信息包括:选择性操作系统实用工具禁止,即AppGuard策略可以指定哪些工具被禁止;条件性暂停保护,这意味着管理员可以通过不同方式暂时暂停保护以适应各种情况;以及操作系统实用工具的遏制,当全面禁止过于严格时,AppGuard可以通过限制读写权限等方式来限制这些工具的行为。此外,AppGuard还能够隔离操作系统设置,防止对手修改由IT/安全运营设定的安全配置。
+只能应用一些零信任原则来限制被隔离应用程序在多个维度(如文件、注册表、内存、子进程、权限和网络)上的读写操作。微软的应用程序防护是唯一具备此功能的端点保护平台(EPP)产品,并免费提供给所有Windows企业许可证持有者,但使用率不到1%。企业也可以从其他供应商处购买各种实现。
+
+将零信任原则应用于高风险应用程序意味着不允许它们执行潜在恶意操作。这些操作与企业网络安全堆栈中可能拥有的四种类型工具的关系如下所示。应用程序控制分为预执行和后执行(也称作peri执行),因为很少有应用程序控制工具支持后执行,那些支持后执行的工具被认为太难使用。尽管如此,我们可以看到每种工具对高风险应用程序可能应用的零信任缓解措施。
+
+涵盖/遗漏的零信任原则:
+- 应用程序控制(预执行)
+- 应用程序控制(后执行)
+- 行为检测(EDR)
+- 隔离
+
+将文件下载到磁盘:否、是、否、是
+启动/加载磁盘上的文件:是、否、可能、否
+修改磁盘上已有的关键系统或应用程序文件:否、是、可能、是
+读取/窃取操作系统或其他应用程序内存中的数据:否、否、可能、是
+将恶意指令注入另一个应用程序的内存:否、否、可能、是
+将恶意库加载到另一个应用程序的内存:是、否、可能、是
+添加/修改注册表键:否、是、可能、是
+启动并使用操作系统实用程序:是、否、可能、是
+启动/使用无文件进程:否、是、可能、是
+接收并执行来自远程对手的命令:否、否、可能、是
+传输被盗数据:否、否、否、是
+
+行为检测(也称作EDR)不是零信任机制。许多“可能”答案需要解释。一个AppJacking攻击可能涉及十个阶段。如果在第三阶段发生检测,并且该检测具有高统计置信度,那么行为检测代理将在一秒钟内终止攻击中识别的所有进程。这可能发生在第四到第六阶段之前,这意味着第七到第十阶段永远不会发生。预防第七到第十阶段可能相当于上表中会被阻止的一个或多个行。但这些都是反应而非零信任拒绝。行为检测代理不会明确阻止第七到第十行的动作。相反,终止相关进程会导致这些原本会发生的行为被终止。从默认拒绝的角度来看,行为检测不是零信任机制。零信任机制本质上是确定性的:允许/拒绝特定动作。
+
+在端点内添加零信任到网络安全防御对于缓解AppJacking风险和降低劳动力成本至关重要。优秀的医疗保健包括预防措施,如疫苗以避免感染,以及早期检测方法以治疗疾病。企业的网络安全防御也是如此,两者结合更好。检测工具可以击败可识别的恶意软件攻击。零信任工具不是通过识别恶意软件,而是通过阻止其有害行为来击败攻击。一种工具可以阻止另一种工具错过的,或者比另一种工具更早地阻止。这是优秀的网络安全防御。
+
+通过零信任工具阻止检测工具错过的内容,并在检测工具反应之前阻止一些可检测的攻击,添加一个在端点内应用零信任的工具可以减少网络安全堆栈中多个检测工具的警报数量,从而减轻相应网络安全团队的工作负担。此外,端点内的零信任控制在实时阻止攻击,这通常发生在端点被攻破之前。这样的工具可以在检测工具在端点被攻破后做出反应时减轻那些必须修复端点的人的工作负担。
+
+隔离看起来很好但很少部署,因为大多数实现都非常痛苦。这个话题值得单独一篇博客文章。简而言之,有几种不同的隔离工具。主机沙箱不同于网络或云沙箱,它是一个垃圾场,几年前就被企业端点移除了。微软提供的“应用程序防护”采用了进程虚拟化。这要求修改应用程序源代码,以便应用程序能够穿透边界在整个端点上工作。很少有应用程序经过这样的修改。“应用程序防护”随Windows企业许可证免费提供,但不到1%的企业选择使用它。Bromium基于驱动的隔离工具也遭受了与主机沙箱相同的命运。几乎没有EPP包含隔离功能。必须从第三方获取这些功能。
+
+AppGuard提供了企业所需以补充检测防御的零信任能力。AppGuard结合了“隔离”和“预执行应用程序控制”,相当于上表中总结的因AppJacking导致的有害操作的所有“是”条目,详细信息见底部表格。
+
+与其他方案相比,AppGuard的操作工作量较小。AppGuard几乎不受过去和现在的应用程序控制或隔离工具的操作困难的影响。AppGuard确实需要一些前期调优,如果受保护主机进行了重大更改,有时后期也需要调优。在策略未强制执行的短暂发现阶段,可以看到一个或少数几个合法应用程序需要进行策略调优。在策略强制执行的第一周或两周内,可能还需要一些额外的调优。根据观察,部署代理中不到1%的策略与供应商指定的默认策略不同,这种调优工作量很小且很短暂。
